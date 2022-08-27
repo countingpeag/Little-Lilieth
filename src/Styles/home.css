@@ -1,0 +1,16 @@
+.item-center{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-size{
+    width: 95%;
+    height: 100%;
+}
+
+.post-img{
+    width: 200px;
+}

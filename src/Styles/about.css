@@ -1,0 +1,13 @@
+.main-font{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.field-size{
+    width: 80%;
+}
+
+.button-padding{
+    padding-top: 3%;
+}

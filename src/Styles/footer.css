@@ -1,0 +1,21 @@
+.Footer-main{
+    text-align: center;
+    background-color: pink;
+}
+
+.social-icones{
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+a:visited {
+color: black;
+background-color: transparent;
+text-decoration: none;
+}
+
+a:active {
+color: grey;
+background-color: transparent;
+text-decoration: underline;
+}
