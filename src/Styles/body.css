@@ -13,3 +13,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.block-space{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: aqua;
+}
