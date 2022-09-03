@@ -11,12 +11,13 @@ import { debounce } from './utilities/debounce.js';
 const theme = createTheme({
   palette: {
     primary: {
-      //main: '#ffc0cb',
       main: '#000000'
+    },
+    secondary: {
+      main : '#ffc0cb'
     }
   },
 });
-
 
 
 function App() {

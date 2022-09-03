@@ -2,6 +2,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { HashLink } from 'react-router-hash-link';
 import '../../Styles/footer.css';
 
 const Footer = ({theme}) => {
@@ -50,13 +51,13 @@ const Footer = ({theme}) => {
                             <b>Infromation</b>
                         </Grid>
                         <Grid xs={12}>
-                            About us
+                            <HashLink smooth to={'#about-us'}>About us</HashLink>
                         </Grid>
                         <Grid xs={12}>
-                            Contact us
+                        <   HashLink smooth to={'#contact'}>Contact us</HashLink>
                         </Grid>
                         <Grid xs={12}>
-                            FAQ
+                            <HashLink smooth to={'#faq'}>FAQ</HashLink>
                         </Grid>
                     </Grid>
                 </Grid>

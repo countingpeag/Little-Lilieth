@@ -9,13 +9,19 @@
 }
 
 a:visited {
-color: black;
-background-color: transparent;
-text-decoration: none;
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 a:active {
-color: grey;
-background-color: transparent;
-text-decoration: underline;
+    color: grey;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
 }

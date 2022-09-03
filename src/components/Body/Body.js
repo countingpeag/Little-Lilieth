@@ -16,7 +16,7 @@ const Body = ({theme}) => {
                 <Posts theme={theme} />
             </Grid>
             <Grid xs={12} id="contact">
-                <Contact />
+                <Contact theme={theme}/>
             </Grid>
             <Grid xs={12} id="faq" className="faq">
                 <FAQ />
