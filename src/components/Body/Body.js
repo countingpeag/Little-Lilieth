@@ -8,14 +8,14 @@ import '../../Styles/body.css';
 
 const Body = ({theme}) => {
     return (
-        <Grid container spacing={{ xs:8 }} columns={{xs:12}}>
-            <Grid xs={12}>
+        <Grid container columns={{xs:12}}>
+            <Grid xs={12} className="home">
                 <Home theme={theme} />
             </Grid>
-            <Grid xs={12} id="posts">
-                <Posts theme={theme} />
+            <Grid xs={12} id="posts" className="posts">
+                <Posts theme={theme}/>
             </Grid>
-            <Grid xs={12} id="contact">
+            <Grid xs={12} id="contact" className="contact">
                 <Contact theme={theme}/>
             </Grid>
             <Grid xs={12} id="faq" className="faq">

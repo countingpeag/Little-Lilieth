@@ -31,7 +31,7 @@ const Home = ({theme}) => {
     }
 
     return (
-        <Grid container spacing={{xs: 2}} columns={{xs: 12}}>
+        <Grid container columns={{xs: 12}}>
             <Grid xs={12} className="item-center">
                 <Card sx={{ maxWidth: 2000 }} className="card-size">
                     <CardActionArea>
@@ -44,7 +44,7 @@ const Home = ({theme}) => {
                     </CardActionArea>
                 </Card>
             </Grid>
-            <Grid xs={12}>
+            <Grid xs={12} className="rail">
                 <ThemeProvider theme={theme}>
                     <Pagination className="item-center" count={3} color="primary" variant="outlined" onChange={handlePaginationChange} />
                 </ThemeProvider>
