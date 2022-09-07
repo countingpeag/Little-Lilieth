@@ -51,13 +51,13 @@ const Footer = ({theme}) => {
                             <b>Infromation</b>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink smooth to={'#about-us'}>About us</HashLink>
+                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>About us</HashLink>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink smooth to={'#contact'}>Contact us</HashLink>
+                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>Contact us</HashLink>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink smooth to={'#faq'}>FAQ</HashLink>
+                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>FAQ</HashLink>
                         </Grid>
                     </Grid>
                 </Grid>

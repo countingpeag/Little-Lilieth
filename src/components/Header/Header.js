@@ -14,19 +14,19 @@ const Header = ({theme}) => {
                 </HashLink>
             </Grid>
             <Grid xs={12}>
-                <HashLink smooth to={'#'}>
+                <HashLink style={{ textDecoration: 'none' }} smooth to={'#'}>
                     <Button theme={theme} color="primary"> Home </Button> 
                 </HashLink>
-                <HashLink smooth to={'#posts'}>
+                <HashLink style={{ textDecoration: 'none' }} smooth to={'#posts'}>
                     <Button theme={theme} color="primary"> Blog Posts </Button>
                 </HashLink>
-                <HashLink smooth to={'#about-us'}>
+                <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>
                     <Button theme={theme} color="primary"> About Us </Button>
                 </HashLink>
-                <HashLink smooth to={'#contact'}>
+                <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>
                     <Button theme={theme} color="primary"> Contact </Button>
                 </HashLink>
-                <HashLink smooth to={'#faq'}>
+                <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>
                     <Button theme={theme} color="primary"> FAQ </Button>
                 </HashLink>
             </Grid>
