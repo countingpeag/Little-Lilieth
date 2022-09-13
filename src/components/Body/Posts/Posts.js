@@ -34,7 +34,7 @@ const Posts = () => {
                 </div>
             </Grid>
             <Grid xs={12} className="image-list">
-                <ImageList className="list-size" cols={4} gap={15}> 
+                <ImageList className="list-size" cols={4} gap={10}> 
                     {
                         images.map( (item, index) => (
                             <ImageListItem key={index} >
