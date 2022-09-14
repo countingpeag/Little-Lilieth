@@ -4,11 +4,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 
-import '../../../Styles/home.css';
+import '../../../Styles/news.css';
 import flower from '../../../images/flor1.PNG';
 import characters1 from '../../../images/monitos1.PNG';
 import basic1 from '../../../images/sencillo1.PNG';
@@ -36,11 +34,6 @@ const Home = ({theme}) => {
                 <Card sx={{ maxWidth: 2000 }} className="card-size">
                     <CardActionArea>
                         <CardMedia component="img" height="500" image={images[page].image} alt={images[page].text} className="post-img" />
-                        <CardContent>
-                            <Typography variant="body2" color="text.secondary">
-                                { images[page].description }
-                            </Typography>
-                        </CardContent>
                     </CardActionArea>
                 </Card>
             </Grid>
