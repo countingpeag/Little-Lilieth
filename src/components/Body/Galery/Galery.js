@@ -12,7 +12,7 @@ const Galery = ({title, images}) => {
                 <ImageList cols={4} rowHeight={'auto'} gap={10}>
                     {
                         images.map( (item) => (
-                            <ImageListItem key={item.img}>
+                            <ImageListItem key={item.title}>
                                 <img src={`${item.image}?w=164&h=164&fit=crop&auto=format`} 
                                     srcSet={`${item.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`} 
                                     alt={item.title} 
