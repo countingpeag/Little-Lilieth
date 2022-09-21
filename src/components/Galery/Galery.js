@@ -1,13 +1,12 @@
-import Header from './components/Header';
-import Body from './components/Body';
-import Footer from './components/Footer';
+import Header from '../Header'
+import ImagesGrid from './ImagesGrid';
+import Footer from '../Footer';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import './App.css';
 import { useState, useEffect } from 'react';
-import { debounce } from './utilities/debounce.js';
+import { debounce } from '../../utilities/debounce.js';
 
-const App = ({theme}) => {
+const Galery = ({title, images, theme}) => {
 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -35,7 +34,7 @@ const App = ({theme}) => {
           <Header theme={theme} />
         </Grid>
         <Grid xs={12} key={"body"} className="body">
-          <Body theme={theme} />
+          <ImagesGrid title={title} images={images} />
         </Grid>
         <Grid xs={12} key={"footer"} className="footer">
           <Footer theme={theme} />
@@ -45,4 +44,4 @@ const App = ({theme}) => {
   );
 }
 
-export default App;
+export default Galery;

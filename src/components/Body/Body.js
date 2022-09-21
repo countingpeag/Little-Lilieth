@@ -4,7 +4,6 @@ import Contact from './Contact';
 import FAQ from './FQA';
 import Posts from './Posts';
 import Grid from '@mui/material/Unstable_Grid2';
-import Galery from './Galery';
 import '../../Styles/body.css';
 
 import flower1 from '../../images/flor1.PNG';
@@ -27,9 +26,6 @@ const images = [
     { image: flower2, title: "flower2", description: "This is test image"}
 ];
 
-const title = "Bows";
-
-
 const Body = ({theme}) => {
     return (
         <Grid container columns={{xs:12}}>
@@ -47,9 +43,6 @@ const Body = ({theme}) => {
             </Grid>
             <Grid xs={12} id="about-us" className="about">
                 <About />
-            </Grid>
-            <Grid xs={12} >
-                <Galery title={title} images={images}/>
             </Grid>
         </Grid>
         );

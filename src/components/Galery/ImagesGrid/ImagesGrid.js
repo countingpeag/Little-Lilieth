@@ -2,7 +2,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Grid from '@mui/material/Unstable_Grid2';
 
-const Galery = ({title, images}) => {
+const ImagesGrid = ({title, images}) => {
     return(
         <Grid container columns={{xs:12}}>
             <Grid xs={12}>
@@ -26,4 +26,4 @@ const Galery = ({title, images}) => {
     );
 }
 
-export default Galery;
+export default ImagesGrid;
