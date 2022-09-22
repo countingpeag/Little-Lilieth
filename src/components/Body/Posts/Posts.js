@@ -4,6 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import { Link } from 'react-router-dom';
 
 import '../../../Styles/posts.css';
 
@@ -33,9 +34,11 @@ const Posts = ({images}) => {
                                     position="top"
                                     actionPosition="left"
                                     actionIcon={
-                                        <IconButton sx={{ color: 'white' }} aria-label={`star ${item.title}`} onClick={handleImageButton}>
-                                          <ViewModuleIcon/>
-                                        </IconButton>
+                                        <Link to={"/galery"} >
+                                            <IconButton sx={{ color: 'white' }} aria-label={`star ${item.title}`} onClick={handleImageButton}>
+                                            <ViewModuleIcon/>
+                                            </IconButton>
+                                        </Link>
                                       }
                                 />
                             </ImageListItem>

@@ -1,6 +1,6 @@
-import Header from '../Header'
+import GaleryHeader from './GaleryHeader';
 import ImagesGrid from './ImagesGrid';
-import Footer from '../Footer';
+import GaleryFooter from './GaleryFooter';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
@@ -31,13 +31,13 @@ const Galery = ({title, images, theme}) => {
     <Box sx={{ flexGrow: 1}} className="App">
       <Grid container column={{ xs:4, sm:8, md:12 }}>
         <Grid xs={12} key={"header"} style={{top: headerVisible ? '0' : '-200px' }} className="header"> 
-          <Header theme={theme} />
+          <GaleryHeader theme={theme} />
         </Grid>
         <Grid xs={12} key={"body"} className="body">
           <ImagesGrid title={title} images={images} />
         </Grid>
         <Grid xs={12} key={"footer"} className="footer">
-          <Footer theme={theme} />
+          <GaleryFooter theme={theme} />
         </Grid>
       </Grid>
     </Box>

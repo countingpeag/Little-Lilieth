@@ -1,6 +1,7 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Grid from '@mui/material/Unstable_Grid2';
+import '../../../Styles/galery.css';
 
 const ImagesGrid = ({title, images}) => {
     return(
@@ -8,8 +9,8 @@ const ImagesGrid = ({title, images}) => {
             <Grid xs={12}>
                 <h1>{title}</h1>
             </Grid>
-            <Grid xs={12}>
-                <ImageList cols={4} rowHeight={'auto'} gap={10}>
+            <Grid xs={12} className="image-list">
+                <ImageList rowHeight={'auto'} cols={4}  gap={10} className="list-size">
                     {
                         images.map( (item) => (
                             <ImageListItem key={item.title}>
