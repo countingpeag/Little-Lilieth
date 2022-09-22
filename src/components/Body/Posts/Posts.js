@@ -10,10 +10,6 @@ import '../../../Styles/posts.css';
 
 const Posts = ({images}) => {
 
-    const handleImageButton = () => {
-        console.log("CLICKED");
-    }
-
     return (
         <Grid container columns={{ xs:12 }} >
             <Grid xs={12}>
@@ -35,8 +31,8 @@ const Posts = ({images}) => {
                                     actionPosition="left"
                                     actionIcon={
                                         <Link to={"/galery"} >
-                                            <IconButton sx={{ color: 'white' }} aria-label={`star ${item.title}`} onClick={handleImageButton}>
-                                            <ViewModuleIcon/>
+                                            <IconButton sx={{ color: 'white' }} aria-label={`star ${item.title}`} >
+                                                <ViewModuleIcon/>
                                             </IconButton>
                                         </Link>
                                       }

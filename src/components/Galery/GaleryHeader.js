@@ -9,7 +9,7 @@ const GaleryHeader = ({theme}) => {
     return (
         <Grid container columns={{xs:12}} className="header-main">
             <Grid xs={12}>
-                <Link smooth to={'/'}>
+                <Link to={'/'}>
                     <img src={logo} alt="logo" className="header-img" />
                 </Link>
             </Grid>
