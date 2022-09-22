@@ -2,10 +2,10 @@ import Grid from '@mui/material/Unstable_Grid2';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import '../../Styles/footer.css';
 
-const Footer = ({theme}) => {
+const GaleryFooter = ({theme}) => {
     return (
         <Grid container columns={{ xs:12 }}>
             <Grid xs={12} md={4} lg={4}>
@@ -51,13 +51,13 @@ const Footer = ({theme}) => {
                             <b>Infromation</b>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>About us</HashLink>
+                            <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>About us</Link>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>Contact us</HashLink>
+                            <Link style={{ textDecoration: 'none' }} to={'/#contact'}>Contact us</Link>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>FAQ</HashLink>
+                            <Link style={{ textDecoration: 'none' }} to={'/#faq'}>FAQ</Link>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -66,4 +66,4 @@ const Footer = ({theme}) => {
     )
 }
 
-export default Footer;
+export default GaleryFooter;

@@ -2,36 +2,36 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Button from '@mui/material/Button';
 import '../../Styles/header.css';
 import logo from '../../images/logo.png';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 
-const Header = ({theme}) => {
+const GaleryHeader = ({theme}) => {
     return (
         <Grid container columns={{xs:12}} className="header-main">
             <Grid xs={12}>
-                <HashLink smooth to={'#'}>
+                <Link to={'/'}>
                     <img src={logo} alt="logo" className="header-img" />
-                </HashLink>
+                </Link>
             </Grid>
             <Grid xs={12}>
-                <HashLink style={{ textDecoration: 'none' }} smooth to={'#'}>
+                <Link style={{ textDecoration: 'none' }} to={'/'}>
                     <Button theme={theme} color="primary"> Home </Button> 
-                </HashLink>
-                <HashLink style={{ textDecoration: 'none' }} smooth to={'#posts'}>
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to={'/#posts'}>
                     <Button theme={theme} color="primary"> Blog Posts </Button>
-                </HashLink>
-                <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>
                     <Button theme={theme} color="primary"> About Us </Button>
-                </HashLink>
-                <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to={'/#contact'}>
                     <Button theme={theme} color="primary"> Contact </Button>
-                </HashLink>
-                <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to={'/#faq'}>
                     <Button theme={theme} color="primary"> FAQ </Button>
-                </HashLink>
+                </Link>
             </Grid>
         </Grid>
     );
 }
 
-export default Header;
+export default GaleryHeader;

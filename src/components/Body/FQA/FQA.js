@@ -15,7 +15,7 @@ const FQA = () => {
             <Grid xs={12}>
                 {
                     FAQuestions.map( item =>(
-                        <Accordion>
+                        <Accordion key={item.question}>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id={item.question}>
                                 {item.question}
                             </AccordionSummary>
