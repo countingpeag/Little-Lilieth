@@ -17,8 +17,8 @@ const GaleryHeader = ({theme}) => {
                 <Link style={{ textDecoration: 'none' }} to={'/'}>
                     <Button theme={theme} color="primary"> Home </Button> 
                 </Link>
-                <Link style={{ textDecoration: 'none' }} to={'/#posts'}>
-                    <Button theme={theme} color="primary"> Blog Posts </Button>
+                <Link style={{ textDecoration: 'none' }} to={'/#products'}>
+                    <Button theme={theme} color="primary"> Products </Button>
                 </Link>
                 <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>
                     <Button theme={theme} color="primary"> About Us </Button>

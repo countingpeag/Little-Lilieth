@@ -2,7 +2,7 @@ import News from './News';
 import About from './About';
 import Contact from './Contact';
 import FAQ from './FQA';
-import Posts from './Posts';
+import Products from './Products';
 import Grid from '@mui/material/Unstable_Grid2';
 import '../../Styles/body.css';
 
@@ -32,8 +32,8 @@ const Body = ({theme}) => {
             <Grid xs={12} className="news">
                 <News theme={theme} />
             </Grid>
-            <Grid xs={12} id="posts" className="posts">
-                <Posts theme={theme} images={images}/>
+            <Grid xs={12} id="products" className="products">
+                <Products theme={theme} images={images}/>
             </Grid>
             <Grid xs={12} id="contact" className="contact">
                 <Contact theme={theme}/>

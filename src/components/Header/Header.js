@@ -17,8 +17,8 @@ const Header = ({theme}) => {
                 <HashLink style={{ textDecoration: 'none' }} smooth to={'#'}>
                     <Button theme={theme} color="primary"> Home </Button> 
                 </HashLink>
-                <HashLink style={{ textDecoration: 'none' }} smooth to={'#posts'}>
-                    <Button theme={theme} color="primary"> Blog Posts </Button>
+                <HashLink style={{ textDecoration: 'none' }} smooth to={'#products'}>
+                    <Button theme={theme} color="primary"> Products </Button>
                 </HashLink>
                 <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>
                     <Button theme={theme} color="primary"> About Us </Button>
