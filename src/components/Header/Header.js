@@ -6,6 +6,7 @@ import Select from '@mui/material/Select';
 import { HashLink } from 'react-router-hash-link';
 import { useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles'
+import { useTranslation } from 'react-i18next';
 
 import logo from '../../images/logo.png';
 import '../../Styles/header.css';
@@ -13,10 +14,12 @@ import '../../Styles/header.css';
 
 const Header = ({theme}) => {
 
+    const [t, i18n] = useTranslation();
     const [language, setLanguage] = useState("EN");
 
     const handleLanguage = (event) => {
         setLanguage(event.target.value);
+        i18n.changeLanguage(event.target.value);
     }
 
     return (
@@ -26,9 +29,9 @@ const Header = ({theme}) => {
                     <ThemeProvider theme={theme}>
                         <FormControl sx={{ m: 1, minWidth: 120 }}>
                             <Select value={language} onChange={handleLanguage} displayEmpty inputProps={{ 'aria-label': 'Without label' }}>
-                                <MenuItem value={"EN"}>English</MenuItem>
-                                <MenuItem value={"ESP"}>Spanish</MenuItem>
-                                <MenuItem value={"FR"}>French</MenuItem>
+                                <MenuItem value={"EN"}>{ t('languages.en') }</MenuItem>
+                                <MenuItem value={"ESP"}>{ t('languages.esp') }</MenuItem>
+                                <MenuItem value={"FR"}>{ t('languages.fr') }</MenuItem>
                             </Select>
                         </FormControl>
                     </ThemeProvider>
@@ -42,19 +45,19 @@ const Header = ({theme}) => {
                 </Grid>
                 <Grid xs={12}>  
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#'}>
-                        <Button theme={theme} color="primary"> Home </Button> 
+                        <Button theme={theme} color="primary"> { t('header.home') } </Button> 
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#products'}>
-                        <Button theme={theme} color="primary"> Products </Button>
+                        <Button theme={theme} color="primary"> { t('header.products') }  </Button>
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>
-                        <Button theme={theme} color="primary"> About Us </Button>
+                        <Button theme={theme} color="primary"> { t('header.about-us') }  </Button>
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>
-                        <Button theme={theme} color="primary"> Contact </Button>
+                        <Button theme={theme} color="primary"> { t('header.contact') }  </Button>
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>
-                        <Button theme={theme} color="primary"> FAQ </Button>
+                        <Button theme={theme} color="primary"> { t('header.faq') }  </Button>
                     </HashLink>
                 </Grid>
             </Grid>

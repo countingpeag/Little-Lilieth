@@ -17,6 +17,8 @@ import characterBow from './images/characterBow.jpeg';
 import turtleBow from './images/turtleBow.jpeg';
 import { createTheme } from '@mui/material/styles';
 
+import './i18n.js';
+
 const theme = createTheme({
   palette: {
     primary: {
