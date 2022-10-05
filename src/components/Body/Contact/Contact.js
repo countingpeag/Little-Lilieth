@@ -3,13 +3,17 @@ import TextField from '@mui/material/TextField';
 import logo from '../../../images/logo.png';
 import Button from '@mui/material/Button';
 import { ThemeProvider } from '@mui/material/styles';
+import { useTranslation } from 'react-i18next';
 import '../../../Styles/contact.css';
 
 const Contact = ({theme}) => {
+
+    const [ t ] = useTranslation();
+
     return (
         <Grid container columns={{ xs:12 }}>
             <Grid xs={12} className="subject-margin">
-                <h1>CONTACT US</h1>
+                <h1>{ t('contact.title') }</h1>
             </Grid>
             <Grid xs={12} md={6} >
                 <Grid xs={12}>
@@ -18,7 +22,7 @@ const Contact = ({theme}) => {
                     </div>
                 </Grid>
                 <Grid xs={12} className="text" >
-                    <h3>Contact us and tell us how much you love our perfect products. Give us your opinion to be better every day.</h3>
+                    <h3>{ t('contact.tagline') }</h3>
                 </Grid>
             </Grid>
             <Grid xs={12} md={6}>

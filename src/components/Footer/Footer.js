@@ -3,9 +3,14 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { HashLink } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
+
 import '../../Styles/footer.css';
 
 const Footer = ({theme}) => {
+
+    const [ t ] = useTranslation();
+
     return (
         <Grid container columns={{ xs:12 }}>
             <Grid xs={12} md={4} lg={4}>
@@ -27,10 +32,10 @@ const Footer = ({theme}) => {
             <Grid xs={12} md={4} lg={4}>
                 <Grid container>
                     <Grid xs={12}>
-                        <b>Lillte Lilieth</b>
+                        <b>{ t('footer.center.title') }</b>
                     </Grid>
                     <Grid xs={12}>
-                        We are the best bow sellers.
+                        { t('footer.center.subTagline') }
                     </Grid>
                 </Grid>
             </Grid>
@@ -47,17 +52,17 @@ const Footer = ({theme}) => {
                     <Grid xs={2}>
                     </Grid>
                     <Grid xs={2}>
-                    <Grid xs={12}>
+                        <Grid xs={12}>
                             <b>Infromation</b>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>About us</HashLink>
+                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>{ t('footer.right.about-us') }</HashLink>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>Contact us</HashLink>
+                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>{ t('footer.right.contact-us') }</HashLink>
                         </Grid>
                         <Grid xs={12}>
-                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>FAQ</HashLink>
+                            <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>{ t('footer.right.faq') }</HashLink>
                         </Grid>
                     </Grid>
                 </Grid>

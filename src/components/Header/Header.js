@@ -48,16 +48,16 @@ const Header = ({theme}) => {
                         <Button theme={theme} color="primary"> { t('header.home') } </Button> 
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#products'}>
-                        <Button theme={theme} color="primary"> { t('header.products') }  </Button>
+                        <Button theme={theme} color="primary"> { t('header.products') } </Button>
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>
-                        <Button theme={theme} color="primary"> { t('header.about-us') }  </Button>
+                        <Button theme={theme} color="primary"> { t('header.about-us') } </Button>
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>
-                        <Button theme={theme} color="primary"> { t('header.contact') }  </Button>
+                        <Button theme={theme} color="primary"> { t('header.contact') } </Button>
                     </HashLink>
                     <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>
-                        <Button theme={theme} color="primary"> { t('header.faq') }  </Button>
+                        <Button theme={theme} color="primary"> { t('header.faq') } </Button>
                     </HashLink>
                 </Grid>
             </Grid>
