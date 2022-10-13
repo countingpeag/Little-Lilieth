@@ -15,13 +15,14 @@ const Contact = ({theme}) => {
 
     const submitEmail = (e) => {
         e.preventDefault();
-        console.log(form.current);
 
-        emailjs.sendForm('service_lq9uvtg', 'template_eocj2b8', form.current, 'URtBvALS0m0e3VJ2G')
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID)
         .then((result) => {
             console.log(result.text);
+            alert("Message sent successfully.")
         }, (error) => {
             console.log(error.text);
+            alert("Ops! something went wrong. Try it again in few minutes.")
         });
     }
 
