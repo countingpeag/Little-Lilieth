@@ -1,29 +1,52 @@
-import { useRef } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import TextField from '@mui/material/TextField';
-import logo from '../../../images/logo.png';
 import Button from '@mui/material/Button';
 import emailjs from '@emailjs/browser';
+import CircularProgress from '@mui/material/CircularProgress';
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
 import { ThemeProvider } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
+import { useRef, useState, SyntheticEvent} from 'react';
+
+import logo from '../../../images/logo.png';
+
 import '../../../Styles/contact.css';
 
 const Contact = ({theme}) => {
 
     const form = useRef();
     const [ t ] = useTranslation();
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [failure, setFailure] = useState(false);
 
     const submitEmail = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID)
         .then((result) => {
+            setLoading(false);
+            setSuccess(true);
             console.log(result.text);
-            alert("Message sent successfully.")
-        }, (error) => {
+        }, 
+        (error) => {
+            alert("JAJAJAJA");
+            setLoading(false);
+            setFailure(true);
             console.log(error.text);
-            alert("Ops! something went wrong. Try it again in few minutes.")
+            
         });
+    }
+
+    const handleClose = (event: SyntheticEvent | Event, reason?: string) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+        
+        setSuccess(false);
+        setFailure(false);
     }
 
     return (
@@ -56,12 +79,32 @@ const Contact = ({theme}) => {
                         <Grid xs={12} className="margin-size">
                             <TextField type="text" color="secondary" name="message" label="Message" multiline rows={10} className="field-size" required/>
                             <div className="button-padding">
-                                <Button type="submit" color="secondary" variant="contained" className="field-size" >SEND</Button>
+                                <Button type="submit" color="secondary" variant="contained" className="field-size" >
+                                    {
+                                        loading ? <CircularProgress /> : "SEND"
+                                    }
+                                </Button>
                             </div>
                         </Grid>
                     </form>
                 </ThemeProvider>
             </Grid>
+
+            <div>
+                <Snackbar open={success} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: 'botton', horizontal: 'center'}}>
+                    <Alert onClose={handleClose} severity="success">
+                        Your message was sent <strong>successfully</strong>
+                    </Alert>
+                </Snackbar>
+            </div>
+
+            <div>
+                <Snackbar open={failure} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: 'botton', horizontal: 'center'}}>
+                    <Alert onClose={handleClose} severity="error">
+                        Ops! something went wrong. <strong>Try it again in few minutes.</strong>
+                    </Alert>
+                </Snackbar>
+            </div>
         </Grid>
     );
 }
