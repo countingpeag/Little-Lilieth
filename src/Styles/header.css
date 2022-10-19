@@ -7,4 +7,13 @@
     width: 200px;
 }
 
+.bottom-alignment{
+    display: flex;
+    align-items: flex-end;
+}
+
+.left-space{
+    margin-left: 8%;
+}
+
 a:link { text-decoration: none; }

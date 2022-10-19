@@ -1,0 +1,14 @@
+{
+    "languages": {
+        "en": "Anglais",
+        "esp": "Espagnol",
+        "fr": "Français"
+    },
+    "header": {
+        "home": "DEBUT",
+        "products": "DES PRODUITS",
+        "about-us": "A PROPOS DE NOUS",
+        "contact": "CONTACTEZ",
+        "faq": "FAQ"
+    }
+}

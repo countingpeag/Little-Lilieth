@@ -17,6 +17,8 @@ import characterBow from './images/characterBow.jpeg';
 import turtleBow from './images/turtleBow.jpeg';
 import { createTheme } from '@mui/material/styles';
 
+import './i18n.js';
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -29,17 +31,15 @@ const theme = createTheme({
 });
 
 const images = [
-  { image: flower1, title: "BOWS", description: "This is test image"},
-  { image: flowerBow, title: "DRESSES", description: "This is test image"},
-  { image: blackBow, title: "ACCESSORIES", description: "This is test image"},
-  { image: characters1, title: "SHOES", description: "This is test image"},
+  { image: flower1, title: "bows", description: "This is test image"},
+  { image: flowerBow, title: "dresses", description: "This is test image"},
+  { image: blackBow, title: "accessories", description: "This is test image"},
+  { image: characters1, title: "shoes", description: "This is test image"},
   { image: basic1, title: "basics", description: "This is test image"},
   { image: characterBow, title: "characterBow", description: "This is test image"},
   { image: turtleBow, title: "turtleBow", description: "This is test image"},
   { image: flower2, title: "flower2", description: "This is test image"}
 ];
-
-const title = "Bows";
 
 const router =  createBrowserRouter([
   {
@@ -48,8 +48,23 @@ const router =  createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/galery",
-    element: <Galery title={title} images={images} theme={theme} />,
+    path: "/bows",
+    element: <Galery title={"BOWS"} images={images} theme={theme} />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/dresses",
+    element: <Galery title={"DRESSES"} images={images} theme={theme} />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/accessories",
+    element: <Galery title={"ACCESSORIES"} images={images} theme={theme} />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/shoes",
+    element: <Galery title={"SHOES"} images={images} theme={theme} />,
     errorElement: <ErrorPage />
   }
 ]);

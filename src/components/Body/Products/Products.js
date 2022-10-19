@@ -5,17 +5,21 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-import '../../../Styles/posts.css';
+import '../../../Styles/products.css';
 
-const Posts = ({images}) => {
+const Products = ({images}) => {
+
+
+    const [ t ] = useTranslation(); 
 
     return (
         <Grid container columns={{ xs:12 }} >
             <Grid xs={12}>
                 <div>
-                    <h1>OUR PRODUCTS</h1>
-                    <h4>OUR PRODUCTS</h4>
+                    <h1>{ t('products.title') }</h1>
+                    <h3>{ t('products.subTitle') }</h3>
                 </div>
             </Grid>
             <Grid xs={12} className="image-list">
@@ -30,7 +34,7 @@ const Posts = ({images}) => {
                                     position="top"
                                     actionPosition="left"
                                     actionIcon={
-                                        <Link to={"/galery"} >
+                                        <Link to={`/${item.title}`} >
                                             <IconButton sx={{ color: 'white' }} aria-label={`star ${item.title}`} >
                                                 <ViewModuleIcon/>
                                             </IconButton>
@@ -46,4 +50,4 @@ const Posts = ({images}) => {
     );
 }
 
-export default Posts;
+export default Products;
