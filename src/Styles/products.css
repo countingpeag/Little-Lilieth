@@ -11,3 +11,9 @@
     height: auto;
 
 }
+
+.item-place{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}

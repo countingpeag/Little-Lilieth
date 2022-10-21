@@ -27,7 +27,7 @@ const Header = ({theme}) => {
             <Grid xs={4} className="bottom-alignment">
                 <div className="left-space">
                     <ThemeProvider theme={theme}>
-                        <FormControl sx={{ m: 1, minWidth: 120 }}>
+                        <FormControl sx={{ m: 1, minWidth: 120 }} variant="standard">
                             <Select value={language} onChange={handleLanguage} displayEmpty inputProps={{ 'aria-label': 'Without label' }}>
                                 <MenuItem value={"EN"}>{ t('languages.en') }</MenuItem>
                                 <MenuItem value={"ESP"}>{ t('languages.esp') }</MenuItem>
