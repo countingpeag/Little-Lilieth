@@ -13,9 +13,14 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import { useState, Fragment } from 'react';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
+import HomeIcon from '@mui/icons-material/Home';
+import EmailIcon from '@mui/icons-material/Email';
+import BurstModeIcon from '@mui/icons-material/BurstMode';
+import LiveHelpIcon from '@mui/icons-material/LiveHelp';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import { useState, Fragment, ReactElement } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { HashLink } from 'react-router-hash-link';
 
@@ -26,7 +31,7 @@ interface Props {
    * You won't need it on your project.
    */
   window?: () => Window;
-  children: React.ReactElement;
+  children: ReactElement;
 }
 
 function HideOnScroll(props: Props) {
@@ -62,7 +67,6 @@ const Menu = (props: Props) => {
             <HashLink smooth to="#">
                 <ListItem key={"N/A"} disablePadding>
                     <ListItemButton>
-                        <InboxIcon />
                         <ListItemText primary={"N/A"} />
                     </ListItemButton>
                 </ListItem>
@@ -70,7 +74,7 @@ const Menu = (props: Props) => {
             <HashLink smooth to="#">
                 <ListItem key={"Home"} disablePadding>
                     <ListItemButton>
-                        <InboxIcon />
+                        <HomeIcon />
                         <ListItemText primary={"Home"} />
                     </ListItemButton>
                 </ListItem>
@@ -78,7 +82,7 @@ const Menu = (props: Props) => {
             <HashLink smooth to="#products">
                 <ListItem key={"Products"} disablePadding>
                     <ListItemButton>
-                        <InboxIcon />
+                        <BurstModeIcon />
                         <ListItemText primary={"Products"} />
                     </ListItemButton>
                 </ListItem>
@@ -86,7 +90,7 @@ const Menu = (props: Props) => {
             <HashLink smooth to="#about-us">
                 <ListItem key={"Aboutus"} disablePadding>
                     <ListItemButton>
-                        <InboxIcon />
+                        <ApartmentIcon />
                         <ListItemText primary={"About us"} />
                     </ListItemButton>
                 </ListItem>
@@ -94,7 +98,7 @@ const Menu = (props: Props) => {
             <HashLink smooth to="#contact">
                 <ListItem key={"Contact"} disablePadding>
                     <ListItemButton>
-                        <InboxIcon />
+                        <EmailIcon />
                         <ListItemText primary={"Contant"} />
                     </ListItemButton>
                 </ListItem>
@@ -102,7 +106,7 @@ const Menu = (props: Props) => {
             <HashLink smooth to="#faq">
                 <ListItem key={"FAQ"} disablePadding>
                     <ListItemButton>
-                        <InboxIcon />
+                        <LiveHelpIcon />
                         <ListItemText primary={"FAQ"} />
                     </ListItemButton>
                 </ListItem>
@@ -114,13 +118,13 @@ const Menu = (props: Props) => {
           <List>
             <ListItem key={"Profile"} disablePadding>
                 <ListItemButton>
-                    <MailIcon />
+                    <AccountCircleIcon />
                     <ListItemText primary={"Profile"} />
                 </ListItemButton>
             </ListItem>
             <ListItem key={"LogOut"} disablePadding>
                 <ListItemButton>
-                    <MailIcon />
+                    <LogoutIcon />
                     <ListItemText primary={"Log out"} />
                 </ListItemButton>
             </ListItem>
