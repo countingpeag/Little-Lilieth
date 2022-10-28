@@ -35,7 +35,7 @@ const App = ({theme}) => {
   return (
     <Box sx={{ flexGrow: 1}} className="App">
       <Grid container column={{ xs:4, sm:8, md:12 }}>
-        <Grid xs={12} key={"header"} style={{top: headerVisible ? '0' : '-200px' }} className="header">
+        <Grid xs={12} key={"header"} className="header">
           { matches ? <Header theme={theme} /> : <Menu theme={theme}  /> }
         </Grid>
         <Grid xs={12} key={"body"} className="body">

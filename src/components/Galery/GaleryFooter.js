@@ -12,7 +12,7 @@ const GaleryFooter = ({theme}) => {
     const [ t ] = useTranslation();
 
     return (
-        <Grid container columns={{ xs:12 }}>
+        <Grid container columns={{ xs:12 }} >
             <Grid xs={12} md={4} lg={4} className="first-section">
                 <div>
                     <div className="social-icones" >@Little Lilieth</div>
@@ -37,18 +37,20 @@ const GaleryFooter = ({theme}) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid xs={12} md={4} lg={4} classNam="thirdSection">
-                <Grid xs={12}>
-                    <b>Infromation</b>
-                </Grid>
-                <Grid xs={12}>
-                    <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>{ t('footer.right.about-us') }</Link>
-                </Grid>
-                <Grid xs={12}>
-                    <Link style={{ textDecoration: 'none' }} to={'/#contact'}>{ t('footer.right.contact-us') }</Link>
-                </Grid>
-                <Grid xs={12}>
-                    <Link style={{ textDecoration: 'none' }} to={'/#faq'}>{ t('footer.right.faq') }</Link>
+            <Grid xs={12} md={4} lg={4} className="third-section">
+                <Grid container>
+                    <Grid xs={12}>
+                        <b>Infromation</b>
+                    </Grid>
+                    <Grid xs={12}>
+                        <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>{ t('footer.right.about-us') }</Link>
+                    </Grid>
+                    <Grid xs={12}>
+                        <Link style={{ textDecoration: 'none' }} to={'/#contact'}>{ t('footer.right.contact-us') }</Link>
+                    </Grid>
+                    <Grid xs={12}>
+                        <Link style={{ textDecoration: 'none' }} to={'/#faq'}>{ t('footer.right.faq') }</Link>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

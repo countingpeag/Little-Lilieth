@@ -14,18 +14,18 @@ const Footer = ({theme}) => {
     return (
         <Grid container columns={{ xs:12 }} >
             <Grid xs={12} md={4} lg={4} className="first-section">
-                    <div>
-                        <div className="social-icones" >@Little Lilieth</div>
-                        <span className="social-icones">
-                            <a href='https://www.instagram.com/littlelilieth/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></a>
-                        </span>
-                        <span className="social-icones">
-                            <a href='https://www.facebook.com/littlelilieth' target="_blank" rel="noopener noreferrer"><FacebookIcon /></a>
-                        </span>
-                        <span className="social-icones">
-                            <a href='https://www.youtube.com/' target="_blank" rel="noopener noreferrer"><YouTubeIcon /></a>
-                        </span>
-                    </div>
+                <div>
+                    <div className="social-icones" >@Little Lilieth</div>
+                    <span className="social-icones">
+                        <a href='https://www.instagram.com/littlelilieth/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></a>
+                    </span>
+                    <span className="social-icones">
+                        <a href='https://www.facebook.com/littlelilieth' target="_blank" rel="noopener noreferrer"><FacebookIcon /></a>
+                    </span>
+                    <span className="social-icones">
+                        <a href='https://www.youtube.com/' target="_blank" rel="noopener noreferrer"><YouTubeIcon /></a>
+                    </span>
+                </div>
             </Grid>
             <Grid xs={12} md={4} lg={4} className="second-section">
                 <Grid container>
@@ -40,7 +40,7 @@ const Footer = ({theme}) => {
             <Grid xs={12} md={4} lg={4} className="third-section">
                 <Grid container>
                     <Grid xs={12}>
-                        <b>Infromation</b>
+                        <b>Information</b>
                     </Grid>
                     <Grid xs={12}>
                         <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>{ t('footer.right.about-us') }</HashLink>

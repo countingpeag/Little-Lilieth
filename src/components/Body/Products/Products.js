@@ -24,12 +24,12 @@ const Products = ({images}) => {
             <Grid container xs={12}>
                 <Grid xs={6} md={3} className="item-place">
                     <Card sx={{ maxWidth: 380 }}>
-                        <Link to={`/${images[3].title}`} >
+                        <Link to={`/${images[0].title}`} >
                             <CardActionArea>
                                 <CardContent>
-                                <Typography gutterBottom variant="h7" component="strong">
-                                    {images[0].title}
-                                </Typography>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[0].title}
+                                    </Typography>
                                 </CardContent>
                                 <CardMedia component="img" image={images[0].image} alt={images[0].title} height="450"/>
                             </CardActionArea>
@@ -38,12 +38,12 @@ const Products = ({images}) => {
                 </Grid>
                 <Grid xs={6} md={3} className="item-place">
                     <Card sx={{ maxWidth: 380 }}>
-                        <Link to={`/${images[3].title}`} >
+                        <Link to={`/${images[1].title}`} >
                             <CardActionArea>
                                 <CardContent>
-                                <Typography gutterBottom variant="h7" component="strong">
-                                    {images[1].title}
-                                </Typography>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[1].title}
+                                    </Typography>
                                 </CardContent>
                                 <CardMedia component="img" image={images[1].image} alt={images[1].title} height="450"/>
                             </CardActionArea>
@@ -52,12 +52,12 @@ const Products = ({images}) => {
                 </Grid>
                 <Grid xs={6} md={3} className="item-place">
                     <Card sx={{ maxWidth: 380 }}>
-                        <Link to={`/${images[3].title}`} >
+                        <Link to={`/${images[2].title}`} >
                             <CardActionArea>
                                 <CardContent>
-                                <Typography gutterBottom variant="h7" component="strong">
-                                    {images[2].title}
-                                </Typography>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[2].title}
+                                    </Typography>
                                 </CardContent>
                                 <CardMedia component="img" image={images[2].image} alt={images[2].title} height="450"/>
                             </CardActionArea>
@@ -69,9 +69,9 @@ const Products = ({images}) => {
                         <Link to={`/${images[3].title}`} >
                             <CardActionArea>
                                 <CardContent>
-                                <Typography gutterBottom variant="h7" component="strong">
-                                    {images[3].title}
-                                </Typography>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[3].title}
+                                    </Typography>
                                 </CardContent>
                                 <CardMedia component="img" image={images[3].image} alt={images[3].title} height="450"/>
                             </CardActionArea>
