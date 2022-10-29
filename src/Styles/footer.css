@@ -25,3 +25,41 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
 }
+
+@media (min-width: 600px) {
+    .first-section{
+        margin-bottom: 1%; 
+        margin-top: 1%; 
+
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .second-section{
+        margin-bottom: 1%; 
+        margin-top: 1%;    
+    }
+    .third-section{
+        margin-bottom: 1%; 
+        margin-top: 1%; 
+
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 600px) {
+    .first-section{
+        margin-bottom: 2%; 
+        margin-top: 2%; 
+    }
+    .second-section{
+        margin-bottom: 2%; 
+        margin-top: 2%;    
+    }
+    .third-section{
+        margin-bottom: 2%; 
+        margin-top: 2%; 
+    }
+}

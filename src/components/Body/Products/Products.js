@@ -1,16 +1,15 @@
 import Grid from '@mui/material/Unstable_Grid2';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
-import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import '../../../Styles/products.css';
 
 const Products = ({images}) => {
-
 
     const [ t ] = useTranslation(); 
 
@@ -22,29 +21,63 @@ const Products = ({images}) => {
                     <h3>{ t('products.subTitle') }</h3>
                 </div>
             </Grid>
-            <Grid xs={12} className="image-list">
-                <ImageList className="list-size" cols={4} gap={10}> 
-                    {
-                        images.map( (item, index) => (
-                            <ImageListItem key={index} >
-                                <img src={item.image} alt={item.title} loading="lazy" />
-                                <ImageListItemBar
-                                    sx={{background:'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'}}
-                                    title={item.title}
-                                    position="top"
-                                    actionPosition="left"
-                                    actionIcon={
-                                        <Link to={`/${item.title}`} >
-                                            <IconButton sx={{ color: 'white' }} aria-label={`star ${item.title}`} >
-                                                <ViewModuleIcon/>
-                                            </IconButton>
-                                        </Link>
-                                      }
-                                />
-                            </ImageListItem>
-                        ))
-                    }
-                </ImageList>
+            <Grid container xs={12}>
+                <Grid xs={6} md={3} className="item-place">
+                    <Card sx={{ maxWidth: 380 }}>
+                        <Link to={`/${images[0].title}`} >
+                            <CardActionArea>
+                                <CardContent>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[0].title}
+                                    </Typography>
+                                </CardContent>
+                                <CardMedia component="img" image={images[0].image} alt={images[0].title} height="450"/>
+                            </CardActionArea>
+                        </Link>
+                    </Card>
+                </Grid>
+                <Grid xs={6} md={3} className="item-place">
+                    <Card sx={{ maxWidth: 380 }}>
+                        <Link to={`/${images[1].title}`} >
+                            <CardActionArea>
+                                <CardContent>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[1].title}
+                                    </Typography>
+                                </CardContent>
+                                <CardMedia component="img" image={images[1].image} alt={images[1].title} height="450"/>
+                            </CardActionArea>
+                        </Link>
+                    </Card>
+                </Grid>
+                <Grid xs={6} md={3} className="item-place">
+                    <Card sx={{ maxWidth: 380 }}>
+                        <Link to={`/${images[2].title}`} >
+                            <CardActionArea>
+                                <CardContent>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[2].title}
+                                    </Typography>
+                                </CardContent>
+                                <CardMedia component="img" image={images[2].image} alt={images[2].title} height="450"/>
+                            </CardActionArea>
+                        </Link>
+                    </Card>
+                </Grid>
+                <Grid xs={6} md={3} className="item-place">
+                    <Card sx={{ maxWidth: 380 }}>
+                        <Link to={`/${images[3].title}`} >
+                            <CardActionArea>
+                                <CardContent>
+                                    <Typography gutterBottom variant="h7" component="strong">
+                                        {images[3].title}
+                                    </Typography>
+                                </CardContent>
+                                <CardMedia component="img" image={images[3].image} alt={images[3].title} height="450"/>
+                            </CardActionArea>
+                        </Link>
+                    </Card>
+                </Grid>
             </Grid>
         </Grid>
     );

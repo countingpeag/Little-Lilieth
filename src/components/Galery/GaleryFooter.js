@@ -12,24 +12,22 @@ const GaleryFooter = ({theme}) => {
     const [ t ] = useTranslation();
 
     return (
-        <Grid container columns={{ xs:12 }}>
-            <Grid xs={12} md={4} lg={4}>
-                <Grid container>
-                    <div>
-                        <div className="social-icones" >@Little Lilieth</div>
-                        <span className="social-icones">
-                            <a href='https://www.instagram.com/littlelilieth/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></a>
-                        </span>
-                        <span className="social-icones">
-                            <a href='https://www.facebook.com/littlelilieth' target="_blank" rel="noopener noreferrer"><FacebookIcon /></a>
-                        </span>
-                        <span className="social-icones">
-                            <a href='https://www.youtube.com/' target="_blank" rel="noopener noreferrer"><YouTubeIcon /></a>
-                        </span>
-                    </div>
-                </Grid>
+        <Grid container columns={{ xs:12 }} >
+            <Grid xs={12} md={4} lg={4} className="first-section">
+                <div>
+                    <div className="social-icones" >@Little Lilieth</div>
+                    <span className="social-icones">
+                        <a href='https://www.instagram.com/littlelilieth/' target="_blank" rel="noopener noreferrer"><InstagramIcon /></a>
+                    </span>
+                    <span className="social-icones">
+                        <a href='https://www.facebook.com/littlelilieth' target="_blank" rel="noopener noreferrer"><FacebookIcon /></a>
+                    </span>
+                    <span className="social-icones">
+                        <a href='https://www.youtube.com/' target="_blank" rel="noopener noreferrer"><YouTubeIcon /></a>
+                    </span>
+                </div>
             </Grid>
-            <Grid xs={12} md={4} lg={4}>
+            <Grid xs={12} md={4} lg={4} className="second-section">
                 <Grid container>
                     <Grid xs={12}>
                         <b>{ t('footer.center.title') }</b>
@@ -39,31 +37,19 @@ const GaleryFooter = ({theme}) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid xs={12} md={4} lg={4}>
+            <Grid xs={12} md={4} lg={4} className="third-section">
                 <Grid container>
-                    <Grid xs={2}>
+                    <Grid xs={12}>
+                        <b>Infromation</b>
                     </Grid>
-                    <Grid xs={2}>
+                    <Grid xs={12}>
+                        <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>{ t('footer.right.about-us') }</Link>
                     </Grid>
-                    <Grid xs={2}>
+                    <Grid xs={12}>
+                        <Link style={{ textDecoration: 'none' }} to={'/#contact'}>{ t('footer.right.contact-us') }</Link>
                     </Grid>
-                    <Grid xs={2}>
-                    </Grid>
-                    <Grid xs={2}>
-                    </Grid>
-                    <Grid xs={2}>
-                        <Grid xs={12}>
-                            <b>Infromation</b>
-                        </Grid>
-                        <Grid xs={12}>
-                            <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>{ t('footer.right.about-us') }</Link>
-                        </Grid>
-                        <Grid xs={12}>
-                            <Link style={{ textDecoration: 'none' }} to={'/#contact'}>{ t('footer.right.contact-us') }</Link>
-                        </Grid>
-                        <Grid xs={12}>
-                            <Link style={{ textDecoration: 'none' }} to={'/#faq'}>{ t('footer.right.faq') }</Link>
-                        </Grid>
+                    <Grid xs={12}>
+                        <Link style={{ textDecoration: 'none' }} to={'/#faq'}>{ t('footer.right.faq') }</Link>
                     </Grid>
                 </Grid>
             </Grid>
