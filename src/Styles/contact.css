@@ -21,3 +21,10 @@
 .button-padding{
     padding-top: 3%;
 }
+
+@media (max-width: 600px){
+    img{
+        width: 100%;
+        background-color: black;
+    }
+}

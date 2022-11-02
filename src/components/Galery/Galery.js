@@ -8,6 +8,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useState, useEffect } from 'react';
 import { debounce } from '../../utilities/debounce.js';
 
+import '../../Styles/galery.css'
+
 const Galery = ({title, images, theme}) => {
 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -31,9 +33,9 @@ const Galery = ({title, images, theme}) => {
   const matches = useMediaQuery('(min-width:600px)');
 
   return (
-    <Box sx={{ flexGrow: 1}} className="App">
+    <Box sx={{ flexGrow: 1}}>
       <Grid container column={{ xs:4, sm:8, md:12 }}>
-        <Grid xs={12} key={"header"} className="header"> 
+        <Grid xs={12} key={"header"}> 
           { matches ? <GaleryHeader theme={theme} /> : <GaleryMenu theme={theme} /> }
         </Grid>
         <Grid xs={12} key={"body"} className="body">
