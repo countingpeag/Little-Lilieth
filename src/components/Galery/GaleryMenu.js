@@ -120,24 +120,26 @@ const GaleryMenu = (props) => {
   return (
     <Fragment>
         <ThemeProvider theme={props.theme}>
-        <CssBaseline />
-        <HideOnScroll {...props}>
-            <AppBar color="secondary">
-                <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-                        <MenuIcon onClick={handleClick}/>
-                    </IconButton>
-                    <Typography variant="h6" color="inherit" component="div">
-                        Little Lilieth
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-        </HideOnScroll>
-        <Toolbar />
+            <CssBaseline />
+            <HideOnScroll {...props}>
+                <AppBar color="secondary">
+                    <Toolbar>
+                        <Typography variant="h6" color="inherit" component="div" sx={{ flexGrow: 1 }}>
+                        </Typography>
+                        <Typography variant="h6" color="inherit" component="div" sx={{ mr: 2 }}>
+                            Little Lilieth
+                        </Typography>
+                        <IconButton edge="start" color="inherit" aria-label="menu">
+                            <MenuIcon onClick={handleClick}/>
+                        </IconButton>
+                    </Toolbar>
+                </AppBar>
+            </HideOnScroll>
+            <Toolbar />
 
-        <Drawer anchor={"left"} open={menu} onClose={toggleDrawer("left", false)}>
-                {list()}
-        </Drawer>
+            <Drawer anchor={"left"} open={menu} onClose={toggleDrawer("left", false)}>
+                    {list()}
+            </Drawer>
         </ThemeProvider>
     </Fragment>
   );
