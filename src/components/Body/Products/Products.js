@@ -22,7 +22,7 @@ const Products = ({images}) => {
                 </div>
             </Grid>
             <Grid container xs={12}>
-                <Grid xs={6} md={3} className="item-place">
+                <Grid xs={12} md={3} className="item-place">
                     <Card sx={{ maxWidth: 380 }}>
                         <Link to={`/${images[0].title}`} >
                             <CardActionArea>
@@ -36,7 +36,7 @@ const Products = ({images}) => {
                         </Link>
                     </Card>
                 </Grid>
-                <Grid xs={6} md={3} className="item-place">
+                <Grid xs={12} md={3} className="item-place">
                     <Card sx={{ maxWidth: 380 }}>
                         <Link to={`/${images[1].title}`} >
                             <CardActionArea>
@@ -50,7 +50,7 @@ const Products = ({images}) => {
                         </Link>
                     </Card>
                 </Grid>
-                <Grid xs={6} md={3} className="item-place">
+                <Grid xs={12} md={3} className="item-place">
                     <Card sx={{ maxWidth: 380 }}>
                         <Link to={`/${images[2].title}`} >
                             <CardActionArea>
@@ -64,7 +64,7 @@ const Products = ({images}) => {
                         </Link>
                     </Card>
                 </Grid>
-                <Grid xs={6} md={3} className="item-place">
+                <Grid xs={12} md={3} className="item-place">
                     <Card sx={{ maxWidth: 380 }}>
                         <Link to={`/${images[3].title}`} >
                             <CardActionArea>

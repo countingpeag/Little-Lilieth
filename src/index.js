@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import Galery from './components/Galery';
 import ErrorPage from './utilities/ErrorPage';
@@ -16,6 +15,8 @@ import flowerBow from './images/flowerBow.jpeg';
 import characterBow from './images/characterBow.jpeg';
 import turtleBow from './images/turtleBow.jpeg';
 import { createTheme } from '@mui/material/styles';
+
+import './index.css';
 
 import './i18n.js';
 

@@ -1,23 +1,51 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Grid from '@mui/material/Unstable_Grid2';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
+
 import '../../../Styles/galery.css';
 
 const ImagesGrid = ({title, images}) => {
+
+    const matches = useMediaQuery('(min-width:600px)');
+
     return(
         <Grid container columns={{xs:12}}>
             <Grid xs={12}>
                 <h1>{title}</h1>
             </Grid>
             <Grid xs={12} className="image-list">
-                <ImageList rowHeight={'auto'} cols={4}  gap={10} className="list-size">
+                <ImageList rowHeight={'auto'} cols={matches ? 5 : 2} gap={20} className="list-size">
                     {
                         images.map( (item) => (
                             <ImageListItem key={item.title}>
-                                <img src={`${item.image}?w=164&h=164&fit=crop&auto=format`} 
-                                    srcSet={`${item.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`} 
-                                    alt={item.title} 
-                                    loading="lazy" />
+                                <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia component="img" height={matches ? 400 : 200} image={item.image} alt={item.title}/>
+                                    <CardContent>
+                                        <Typography variant="subtitle1" color="text.secondary" component="div">
+                                            {item.description}
+                                        </Typography>
+                                        <Box sx={{ display: 'fix', alignItems: 'center', pl: 1, pb: 1 }}>
+                                            <IconButton aria-label="previous">
+                                                <RemoveIcon/>
+                                            </IconButton>
+                                            <IconButton>
+                                                {"2"}
+                                            </IconButton>
+                                            <IconButton aria-label="next">
+                                                <AddIcon/>
+                                            </IconButton>
+                                        </Box>
+                                    </CardContent>
+                                </Card>
                             </ImageListItem>
                         ))
                     }

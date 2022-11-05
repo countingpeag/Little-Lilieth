@@ -9,3 +9,13 @@
 .list-size{
     width: 95%;
 }
+  
+.footer{
+    background-color: #ffc0cb;
+    margin-top: 2%;
+    border: 20px solid #ffc0cb;
+}
+  
+.body{
+    margin-top: 2%;
+}
