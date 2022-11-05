@@ -1,21 +1,21 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Grid from '@mui/material/Unstable_Grid2';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
 
 import '../../../Styles/galery.css';
 
 const ImagesGrid = ({title, images}) => {
 
-    const theme = useTheme();
+    const matches = useMediaQuery('(min-width:600px)');
 
     return(
         <Grid container columns={{xs:12}}>
@@ -23,30 +23,28 @@ const ImagesGrid = ({title, images}) => {
                 <h1>{title}</h1>
             </Grid>
             <Grid xs={12} className="image-list">
-                <ImageList rowHeight={'auto'} cols={3}  gap={10} className="list-size">
+                <ImageList rowHeight={'auto'} cols={matches ? 5 : 2} gap={20} className="list-size">
                     {
                         images.map( (item) => (
                             <ImageListItem key={item.title}>
-                                <Card sx={{ display: 'flex' }}>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                                        <CardContent sx={{ flex: '1 0 auto' }}>
-                                            <CardMedia component="img" sx={{ width: 151 }} image={item.image} alt="Live from space album cover" />
-                                            <Typography variant="subtitle1" color="text.secondary" component="div">
-                                                {item.description}
-                                            </Typography>
-                                        </CardContent>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                                <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia component="img" height={matches ? 400 : 200} image={item.image} alt={item.title}/>
+                                    <CardContent>
+                                        <Typography variant="subtitle1" color="text.secondary" component="div">
+                                            {item.description}
+                                        </Typography>
+                                        <Box sx={{ display: 'fix', alignItems: 'center', pl: 1, pb: 1 }}>
                                             <IconButton aria-label="previous">
-                                                {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+                                                <RemoveIcon/>
                                             </IconButton>
-                                            <IconButton aria-label="play/pause">
+                                            <IconButton>
                                                 {"2"}
                                             </IconButton>
                                             <IconButton aria-label="next">
-                                                {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+                                                <AddIcon/>
                                             </IconButton>
                                         </Box>
-                                    </Box>
+                                    </CardContent>
                                 </Card>
                             </ImageListItem>
                         ))
