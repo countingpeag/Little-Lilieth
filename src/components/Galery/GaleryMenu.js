@@ -113,7 +113,6 @@ const GaleryMenu = (props) => {
       );
 
     const handleClick = () => {
-        console.log(menu);
         setMenu(true)
     };
 
@@ -137,7 +136,7 @@ const GaleryMenu = (props) => {
             </HideOnScroll>
             <Toolbar />
 
-            <Drawer anchor={"left"} open={menu} onClose={toggleDrawer("left", false)}>
+            <Drawer anchor={"right"} open={menu} onClose={toggleDrawer("right", false)}>
                     {list()}
             </Drawer>
         </ThemeProvider>

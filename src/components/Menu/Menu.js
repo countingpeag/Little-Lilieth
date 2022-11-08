@@ -138,7 +138,7 @@ const Menu = (props) => {
             </HideOnScroll>
             <Toolbar />
 
-            <Drawer anchor={"left"} open={menu} onClose={toggleDrawer("left", false)}>
+            <Drawer anchor={"right"} open={menu} onClose={toggleDrawer("right", false)}>
                     {list()}
             </Drawer>
         </ThemeProvider>

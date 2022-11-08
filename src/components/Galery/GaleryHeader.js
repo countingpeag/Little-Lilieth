@@ -41,24 +41,24 @@ const GaleryHeader = (props) => {
                                 <Toolbar>
                                     <Grid xs={12}>
                                         <Grid xs={12}>
-                                            <Link smooth to={'/'}>
+                                            <Link to={'/'}>
                                                 <img src={logo} alt="logo" className="header-img" />
                                             </Link>
                                         </Grid>
                                         <Grid xs={12}>  
-                                            <Link style={{ textDecoration: 'none' }} smooth to={'/'}>
+                                            <Link style={{ textDecoration: 'none' }} to={'/'}>
                                                 <Button theme={props.theme} color="primary"> { t('header.home') } </Button> 
                                             </Link>
-                                            <Link style={{ textDecoration: 'none' }} smooth to={'/#products'}>
+                                            <Link style={{ textDecoration: 'none' }} to={'/#products'}>
                                                 <Button theme={props.theme} color="primary"> { t('header.products') } </Button>
                                             </Link>
-                                            <Link style={{ textDecoration: 'none' }} smooth to={'/#about-us'}>
+                                            <Link style={{ textDecoration: 'none' }} to={'/#about-us'}>
                                                 <Button theme={props.theme} color="primary"> { t('header.about-us') } </Button>
                                             </Link>
-                                            <Link style={{ textDecoration: 'none' }} smooth to={'/#contact'}>
+                                            <Link style={{ textDecoration: 'none' }} to={'/#contact'}>
                                                 <Button theme={props.theme} color="primary"> { t('header.contact') } </Button>
                                             </Link>
-                                            <Link style={{ textDecoration: 'none' }} smooth to={'/#faq'}>
+                                            <Link style={{ textDecoration: 'none' }} to={'/#faq'}>
                                                 <Button theme={props.theme} color="primary"> { t('header.faq') } </Button>
                                             </Link>
                                         </Grid>
