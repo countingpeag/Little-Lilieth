@@ -10,12 +10,26 @@ import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
+import { useState } from 'react';
 
 import '../../../Styles/galery.css';
 
 const ImagesGrid = ({title, images}) => {
 
+    const [value, setValue] = useState(0);
     const matches = useMediaQuery('(min-width:600px)');
+
+    const handleAdd = () => {
+        var productStock = 6;
+
+        if(value<productStock)
+            setValue(value+1);
+    }
+
+    const handleRemove = () => {
+        if(value>0)
+            setValue(value-1);
+    }
 
     return(
         <Grid container columns={{xs:12}}>
@@ -34,13 +48,13 @@ const ImagesGrid = ({title, images}) => {
                                             {item.description}
                                         </Typography>
                                         <Box sx={{ display: 'fix', alignItems: 'center', pl: 1, pb: 1 }}>
-                                            <IconButton aria-label="previous">
+                                            <IconButton aria-label="previous" onClick={handleRemove}>
                                                 <RemoveIcon/>
                                             </IconButton>
                                             <IconButton>
-                                                {"2"}
+                                                {value}
                                             </IconButton>
-                                            <IconButton aria-label="next">
+                                            <IconButton aria-label="next" onClick={handleAdd}>
                                                 <AddIcon/>
                                             </IconButton>
                                         </Box>
