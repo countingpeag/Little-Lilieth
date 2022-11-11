@@ -26,7 +26,7 @@ function HideOnScroll(props) {
     );
 }
 
-const GaleryHeader = (props) => {
+const SubHeader = (props) => {
 
     const [ t ] = useTranslation();
 
@@ -75,4 +75,4 @@ const GaleryHeader = (props) => {
     );
 }
 
-export default GaleryHeader;
+export default SubHeader;
