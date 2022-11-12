@@ -5,11 +5,9 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import RemoveIcon from '@mui/icons-material/Remove';
-import AddIcon from '@mui/icons-material/Add';
+import CardActionArea from '@mui/material/CardActionArea';
 
 import '../../../Styles/galery.css';
 
@@ -28,23 +26,22 @@ const ImagesGrid = ({title, images}) => {
                         images.map( (item) => (
                             <ImageListItem key={item.title}>
                                 <Card sx={{ maxWidth: 345 }}>
+                                    
+                                    <CardActionArea>
                                     <CardMedia component="img" height={matches ? 400 : 200} image={item.image} alt={item.title}/>
+                                    
+                                    </CardActionArea>
                                     <CardContent>
                                         <Typography variant="subtitle1" color="text.secondary" component="div">
                                             {item.description}
                                         </Typography>
                                         <Box sx={{ display: 'fix', alignItems: 'center', pl: 1, pb: 1 }}>
-                                            <IconButton aria-label="previous">
-                                                <RemoveIcon/>
-                                            </IconButton>
-                                            <IconButton>
-                                                {"2"}
-                                            </IconButton>
-                                            <IconButton aria-label="next">
-                                                <AddIcon/>
-                                            </IconButton>
+                                            <Typography variant="subtitle1" color="text.secondary" component="div">
+                                                $15
+                                            </Typography>
                                         </Box>
                                     </CardContent>
+                                    
                                 </Card>
                             </ImageListItem>
                         ))

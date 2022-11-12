@@ -1,10 +1,10 @@
-import Header from './components/Header';
+import Header from './components/Headers/Header';
 import Body from './components/Body';
-import Footer from './components/Footer';
+import Footer from './components/Footers/Footer';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Menu from './components/Menu';
+import Menu from './components/Menus/Menu';
 import { useState, useEffect } from 'react';
 import { debounce } from './utilities/debounce.js';
 

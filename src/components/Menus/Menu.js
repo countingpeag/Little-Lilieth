@@ -22,7 +22,8 @@ import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import { useState, Fragment } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 
 function HideOnScroll(props) {
     const { children, window } = props;
@@ -37,7 +38,7 @@ function HideOnScroll(props) {
     );
 }
 
-const GaleryMenu = (props) => {
+const Menu = (props) => {
 
     const [menu, setMenu] = useState(false);
 
@@ -51,46 +52,46 @@ const GaleryMenu = (props) => {
     const list = () => (
         <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)} >
           <List>
-            <Link style={{ textDecoration: 'none' }} to="/">
+            <HashLink smooth to="#">
                 <ListItem key={"Home"} disablePadding>
                     <ListItemButton>
                         <HomeIcon />
                         <ListItemText primary={"Home"} />
                     </ListItemButton>
                 </ListItem>
-            </Link>
-            <Link style={{ textDecoration: 'none' }} to="/#products">
+            </HashLink>
+            <HashLink smooth to="#products">
                 <ListItem key={"Products"} disablePadding>
                     <ListItemButton>
                         <BurstModeIcon />
                         <ListItemText primary={"Products"} />
                     </ListItemButton>
                 </ListItem>
-            </Link>
-            <Link style={{ textDecoration: 'none' }} to="/#about-us">
+            </HashLink>
+            <HashLink smooth to="#about-us">
                 <ListItem key={"Aboutus"} disablePadding>
                     <ListItemButton>
                         <ApartmentIcon />
                         <ListItemText primary={"About us"} />
                     </ListItemButton>
                 </ListItem>
-            </Link>
-            <Link style={{ textDecoration: 'none' }} to="/#contact">
+            </HashLink>
+            <HashLink smooth to="#contact">
                 <ListItem key={"Contact"} disablePadding>
                     <ListItemButton>
                         <EmailIcon />
                         <ListItemText primary={"Contant"} />
                     </ListItemButton>
                 </ListItem>
-            </Link>
-            <Link style={{ textDecoration: 'none' }} to="/#faq">
+            </HashLink>
+            <HashLink smooth to="#faq">
                 <ListItem key={"FAQ"} disablePadding>
                     <ListItemButton>
                         <LiveHelpIcon />
                         <ListItemText primary={"FAQ"} />
                     </ListItemButton>
                 </ListItem>
-            </Link>
+            </HashLink>
           </List>
 
           <Divider />
@@ -137,7 +138,7 @@ const GaleryMenu = (props) => {
             </HideOnScroll>
             <Toolbar />
 
-            <Drawer anchor={"left"} open={menu} onClose={toggleDrawer("left", false)}>
+            <Drawer anchor={"right"} open={menu} onClose={toggleDrawer("right", false)}>
                     {list()}
             </Drawer>
         </ThemeProvider>
@@ -145,4 +146,4 @@ const GaleryMenu = (props) => {
   );
 }
 
-export default GaleryMenu;
+export default Menu;

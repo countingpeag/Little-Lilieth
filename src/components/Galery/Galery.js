@@ -1,7 +1,7 @@
-import GaleryHeader from './GaleryHeader';
+import SubHeader from '../Headers/SubHeader';
 import ImagesGrid from './ImagesGrid';
-import GaleryFooter from './GaleryFooter';
-import GaleryMenu from './GaleryMenu';
+import GaleryFooter from '../Footers/SubFooter';
+import SubMenu from '../Menus/SubMenu';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -36,7 +36,7 @@ const Galery = ({title, images, theme}) => {
     <Box sx={{ flexGrow: 1}}>
       <Grid container column={{ xs:4, sm:8, md:12 }}>
         <Grid xs={12} key={"header"}> 
-          { matches ? <GaleryHeader theme={theme} /> : <GaleryMenu theme={theme} /> }
+          { matches ? <SubHeader theme={theme} /> : <SubMenu theme={theme} /> }
         </Grid>
         <Grid xs={12} key={"body"} className="body">
           <ImagesGrid title={title} images={images} />
