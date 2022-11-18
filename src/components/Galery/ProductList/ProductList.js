@@ -8,47 +8,29 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CardActionArea from '@mui/material/CardActionArea';
-import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
-import IconButton from '@mui/material/IconButton';
+import Product from './Product';
 import { useState } from 'react';
 
 import '../../../Styles/galery.css';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '80%',
-    height: '80%',
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-  };
-  
-
 const ImagesGrid = ({title, images}) => {
 
-    const [open, setOpen] = useState(false);
+    const [opened, setOpened] = useState(false);
     const [currentImage, setCurrentImage] = useState("");
-    const [currentTitle, setCurrentTitle] = useState("");
+    //const [currentTitle, setCurrentTitle] = useState("");
     const [currentPrice, setCurrentPrice] = useState(15);
-    const [currentDescription, setcurrentDescription] = useState("");
+    //const [currentDescription, setcurrentDescription] = useState("");
     const [amount, setAmount] = useState(0);
 
     const handleOpen = (item) => {
         setCurrentImage(item.image);
-        setCurrentTitle(item.title);
-        //setCurrentPrice(item.price);
-        setcurrentDescription(item.description);
-        setOpen(true);
+        //setCurrentTitle(item.title);
+        setCurrentPrice(item.price);
+        //setcurrentDescription(item.description);
+        setOpened(true);
     }
 
-    const handleClose = () => setOpen(false);
+    const handleClose = () => setOpened(false);
 
     const handleAdd = () => {
         var productStock = 6;
@@ -97,28 +79,16 @@ const ImagesGrid = ({title, images}) => {
                 </ImageList>
             </Grid>
 
-            <Grid>
-            <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-                <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        {currentTitle}
-                    </Typography>
-                    <CardMedia component="img" height={matches ? 400 : 200} image={currentImage} alt={currentTitle}/>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        {`Price:${currentPrice}$ Description:${currentDescription}`}
-                    </Typography>
-                    <IconButton aria-label="previous" onClick={handleRemove}>
-                        <RemoveIcon/>
-                    </IconButton>
-                        {amount}
-                    <IconButton aria-label="next" onClick={handleAdd}>
-                        <AddIcon/>
-                    </IconButton>
-                    <Button onClick={handleClose}>Add to Cart</Button>
-                    <Button onClick={handleClose}>Cancel</Button>
-                </Box>
-            </Modal>
-            </Grid>
+            <Product 
+                image={currentImage} 
+                opened={opened} 
+                closeMethod={handleClose} 
+                addMethod={handleAdd} 
+                removeMethod={handleRemove} 
+                matches={matches} 
+                amount={amount} 
+                price={currentPrice}
+            />
         </Grid>
     );
 }
