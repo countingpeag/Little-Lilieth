@@ -1,5 +1,5 @@
 import SubHeader from '../Headers/SubHeader';
-import ImagesGrid from './ImagesGrid';
+import ImagesGrid from './ProductList';
 import GaleryFooter from '../Footers/SubFooter';
 import SubMenu from '../Menus/SubMenu';
 import Grid from '@mui/material/Unstable_Grid2';

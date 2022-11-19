@@ -35,14 +35,14 @@ const theme = createTheme({
 });
 
 const images = [
-  { image: flower1, title: "bows", description: "This is test image"},
-  { image: flowerBow, title: "dresses", description: "This is test image"},
-  { image: blackBow, title: "accessories", description: "This is test image"},
-  { image: characters1, title: "shoes", description: "This is test image"},
-  { image: basic1, title: "basics", description: "This is test image"},
-  { image: characterBow, title: "characterBow", description: "This is test image"},
-  { image: turtleBow, title: "turtleBow", description: "This is test image"},
-  { image: flower2, title: "flower2", description: "This is test image"}
+  { image: flower1, title: "bows", description: "This is a test image"},
+  { image: flowerBow, title: "dresses", description: "This is a test image"},
+  { image: blackBow, title: "accessories", description: "This is a test image"},
+  { image: characters1, title: "shoes", description: "This is a test image"},
+  { image: basic1, title: "basics", description: "This is test a image"},
+  { image: characterBow, title: "characterBow", description: "This is a test image"},
+  { image: turtleBow, title: "turtleBow", description: "This is a test image"},
+  { image: flower2, title: "flower2", description: "This is a test image"}
 ];
 
 const router =  createBrowserRouter([

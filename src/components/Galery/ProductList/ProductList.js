@@ -8,11 +8,42 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CardActionArea from '@mui/material/CardActionArea';
+import Product from './Product';
+import { useState } from 'react';
 
 import '../../../Styles/galery.css';
 
 const ImagesGrid = ({title, images}) => {
 
+    const [opened, setOpened] = useState(false);
+    const [currentImage, setCurrentImage] = useState("");
+    //const [currentTitle, setCurrentTitle] = useState("");
+    const [currentPrice, setCurrentPrice] = useState(15);
+    //const [currentDescription, setcurrentDescription] = useState("");
+    const [amount, setAmount] = useState(0);
+
+    const handleOpen = (item) => {
+        setCurrentImage(item.image);
+        //setCurrentTitle(item.title);
+        setCurrentPrice(item.price);
+        //setcurrentDescription(item.description);
+        setOpened(true);
+    }
+
+    const handleClose = () => setOpened(false);
+
+    const handleAdd = () => {
+        var productStock = 6;
+
+        if(amount<productStock)
+            setAmount(amount+1);
+    }
+
+    const handleRemove = () => {
+        if(amount>0)
+            setAmount(amount-1);
+    }
+  
     const matches = useMediaQuery('(min-width:600px)');
 
     return(
@@ -27,9 +58,8 @@ const ImagesGrid = ({title, images}) => {
                             <ImageListItem key={item.title}>
                                 <Card sx={{ maxWidth: 345 }}>
                                     
-                                    <CardActionArea>
-                                    <CardMedia component="img" height={matches ? 400 : 200} image={item.image} alt={item.title}/>
-                                    
+                                    <CardActionArea onClick={() => handleOpen(item)}>
+                                        <CardMedia component="img" height={matches ? 400 : 200} image={item.image} alt={item.title}/>
                                     </CardActionArea>
                                     <CardContent>
                                         <Typography variant="subtitle1" color="text.secondary" component="div">
@@ -48,6 +78,17 @@ const ImagesGrid = ({title, images}) => {
                     }
                 </ImageList>
             </Grid>
+
+            <Product 
+                image={currentImage} 
+                opened={opened} 
+                closeMethod={handleClose} 
+                addMethod={handleAdd} 
+                removeMethod={handleRemove} 
+                matches={matches} 
+                amount={amount} 
+                price={currentPrice}
+            />
         </Grid>
     );
 }
