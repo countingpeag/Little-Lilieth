@@ -1,5 +1,5 @@
 import SubHeader from '../Headers/SubHeader';
-import ImagesGrid from './ProductList';
+import ProductList from './ProductList';
 import GaleryFooter from '../Footers/SubFooter';
 import SubMenu from '../Menus/SubMenu';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -38,8 +38,8 @@ const Galery = ({title, images, theme}) => {
         <Grid xs={12} key={"header"}> 
           { matches ? <SubHeader theme={theme} /> : <SubMenu theme={theme} /> }
         </Grid>
-        <Grid xs={12} key={"body"} className="body">
-          <ImagesGrid title={title} images={images} />
+        <Grid xs={12}  key={"body"} className="body">
+          <ProductList theme={theme} title={title} images={images} />
         </Grid>
         <Grid xs={12} key={"footer"} className="footer">
           <GaleryFooter theme={theme} />

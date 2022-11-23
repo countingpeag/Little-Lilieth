@@ -8,7 +8,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Modal from '@mui/material/Modal';
 import IconButton from '@mui/material/IconButton';
 
-const Product = ({opened, closeMethod, addMethod, removeMethod, matches, image, amount, price}) => {
+const Product = ({theme, opened, closeMethod, addMethod, removeMethod, matches, image, amount, price}) => {
 
     const boxStyle = {
         position: 'absolute',
@@ -53,10 +53,10 @@ const Product = ({opened, closeMethod, addMethod, removeMethod, matches, image, 
                             <AddIcon/>
                         </IconButton>
                         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            {`Price:${price}$`}
+                            {`Price:${price}`}
                         </Typography>
-                        <Button onClick={closeMethod}>Add to Cart</Button>
-                        <Button onClick={closeMethod}>Cancel</Button>
+                        <Button theme={theme} variant="contained" color="secondary" onClick={closeMethod}>Add to Cart</Button>
+                        <Button theme={theme} variant="outlined" color="secondary" onClick={closeMethod}>Cancel</Button>
                     </Grid>
                 </Grid>
             </Box>
