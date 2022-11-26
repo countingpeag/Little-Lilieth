@@ -10,7 +10,7 @@ import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import { HashLink } from 'react-router-hash-link';
 import { useState, Fragment } from 'react';
-import { ThemeProvider } from '@mui/material/styles'
+import { ThemeProvider } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 
 import logo from '../../images/logo.png';
@@ -69,19 +69,19 @@ const Header = (props) => {
                                         </Grid>
                                         <Grid xs={12}>  
                                             <HashLink style={{ textDecoration: 'none' }} smooth to={'#'}>
-                                                <Button theme={props.theme} color="primary"> { t('header.home') } </Button> 
+                                                <Button color="primary"> { t('header.home') } </Button> 
                                             </HashLink>
                                             <HashLink style={{ textDecoration: 'none' }} smooth to={'#products'}>
-                                                <Button theme={props.theme} color="primary"> { t('header.products') } </Button>
+                                                <Button color="primary"> { t('header.products') } </Button>
                                             </HashLink>
                                             <HashLink style={{ textDecoration: 'none' }} smooth to={'#about-us'}>
-                                                <Button theme={props.theme} color="primary"> { t('header.about-us') } </Button>
+                                                <Button color="primary"> { t('header.about-us') } </Button>
                                             </HashLink>
                                             <HashLink style={{ textDecoration: 'none' }} smooth to={'#contact'}>
-                                                <Button theme={props.theme} color="primary"> { t('header.contact') } </Button>
+                                                <Button color="primary"> { t('header.contact') } </Button>
                                             </HashLink>
                                             <HashLink style={{ textDecoration: 'none' }} smooth to={'#faq'}>
-                                                <Button theme={props.theme} color="primary"> { t('header.faq') } </Button>
+                                                <Button color="primary"> { t('header.faq') } </Button>
                                             </HashLink>
                                         </Grid>
                                     </Grid>

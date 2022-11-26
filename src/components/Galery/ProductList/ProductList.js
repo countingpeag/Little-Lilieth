@@ -13,7 +13,7 @@ import { useState } from 'react';
 
 import '../../../Styles/galery.css';
 
-const ImagesGrid = ({title, images}) => {
+const ProductList = ({theme, title, images}) => {
 
     const [opened, setOpened] = useState(false);
     const [currentImage, setCurrentImage] = useState("");
@@ -25,7 +25,7 @@ const ImagesGrid = ({title, images}) => {
     const handleOpen = (item) => {
         setCurrentImage(item.image);
         //setCurrentTitle(item.title);
-        setCurrentPrice(item.price);
+        //setCurrentPrice(item.price);
         //setcurrentDescription(item.description);
         setOpened(true);
     }
@@ -80,6 +80,7 @@ const ImagesGrid = ({title, images}) => {
             </Grid>
 
             <Product 
+                theme={theme}
                 image={currentImage} 
                 opened={opened} 
                 closeMethod={handleClose} 
@@ -93,4 +94,4 @@ const ImagesGrid = ({title, images}) => {
     );
 }
 
-export default ImagesGrid;
+export default ProductList;
