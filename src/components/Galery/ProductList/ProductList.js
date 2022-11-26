@@ -25,7 +25,7 @@ const ProductList = ({theme, title, images}) => {
     const handleOpen = (item) => {
         setCurrentImage(item.image);
         //setCurrentTitle(item.title);
-        //setCurrentPrice(item.price);
+        setCurrentPrice(item.price);
         //setcurrentDescription(item.description);
         setOpened(true);
     }
