@@ -8,6 +8,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Modal from '@mui/material/Modal';
 import IconButton from '@mui/material/IconButton';
 import Card from '@mui/material/Card';
+import CloseIcon from '@mui/icons-material/Close';
 
 import '../../../Styles/product.css';
 
@@ -17,12 +18,17 @@ const Product = ({theme, opened, closeMethod, addMethod, removeMethod, matches, 
         <Modal open={opened} onClose={closeMethod} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
             <Box className="box">
                 <Grid container className="container">
-                    <Grid xs={6} className="imageSpace">
-                            <Card sx={{ maxWidth: 450 }}>
+                    <Grid xs={12} className="closeButtonSpace">
+                        <IconButton className="closeButton" aria-label="next" onClick={closeMethod}>
+                            <CloseIcon/>
+                        </IconButton>
+                    </Grid>
+                    <Grid xs={6}>
+                            <Card sx={{ maxWidth: 450 }} className="imageSpace">
                                 <CardMedia component="img" height={matches ? 400 : 200} image={image} alt={"image"}/>
                             </Card>
                     </Grid>
-                    <Grid xs={6} className="color1">
+                    <Grid xs={6}>
                         <Grid xs={12}>
                             <Typography id="modal-modal-title" variant="h4" component="h4" align='left'>
                                 TITLE
