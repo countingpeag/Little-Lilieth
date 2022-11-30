@@ -23,10 +23,13 @@ const Product = ({theme, opened, closeMethod, addMethod, removeMethod, matches, 
                             <CloseIcon/>
                         </IconButton>
                     </Grid>
-                    <Grid xs={6}>
-                            <Card sx={{ maxWidth: 450 }} className="imageSpace">
-                                <CardMedia component="img" height={matches ? 400 : 200} image={image} alt={"image"}/>
-                            </Card>
+                    <Grid xs={6} className="color">
+                        <Typography id="modal-modal-title" variant="h4" component="h4" align='center'>
+                            TITLE
+                        </Typography>
+                        <Card sx={{ maxWidth: 450 }} className="imageSpace">
+                            <CardMedia component="img" height={matches ? 400 : 230} image={image} alt={"image"}/>
+                        </Card>
                     </Grid>
                     <Grid xs={6}>
                         <Grid xs={12}>
@@ -40,7 +43,7 @@ const Product = ({theme, opened, closeMethod, addMethod, removeMethod, matches, 
                             </Typography>
                         </Grid>
                         <Grid xs={12}>
-                            <Typography id="modal-modal-description" sx={{ mt: 2 }} className="descriptionSize" align='left'> 
+                            <Typography id="modal-modal-description" sx={{ mt: 2 }} className="descriptionSize" align={matches ? 'left' : 'center'}> 
                                 This is a perfect bow to use in your christmas parties. This is a perfect bow to use in your christmas parties. This is a perfect bow to use in your christmas parties.
                             </Typography>
                         </Grid>
