@@ -74,7 +74,7 @@ const router =  createBrowserRouter([
   },
   {
     path: "/shoping",
-    element: <ShopingKart />,
+    element: <ShopingKart theme={theme}/>,
     errorElement: <ErrorPage />
   }
 ]);

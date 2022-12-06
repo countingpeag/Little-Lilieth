@@ -7,12 +7,12 @@ import { useTranslation } from 'react-i18next';
 
 import '../../Styles/footer.css';
 
-const Footer = ({theme}) => {
+const Footer = () => {
 
     const [ t ] = useTranslation();
 
     return (
-        <Grid container columns={{ xs:12 }} >
+        <Grid container columns={{ xs:12 }} className="footer-main">
             <Grid xs={12} md={4} lg={4} className="first-section">
                 <div>
                     <div className="social-icones" >@Little Lilieth</div>
