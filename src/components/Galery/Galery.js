@@ -1,6 +1,6 @@
 import SubHeader from '../Headers/SubHeader';
 import ProductList from './ProductList';
-import GaleryFooter from '../Footers/SubFooter';
+import SubFooter from '../Footers/SubFooter';
 import SubMenu from '../Menus/SubMenu';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
@@ -42,7 +42,7 @@ const Galery = ({title, images, theme}) => {
           <ProductList theme={theme} title={title} images={images} />
         </Grid>
         <Grid xs={12} key={"footer"} className="footer">
-          <GaleryFooter theme={theme} />
+          <SubFooter />
         </Grid>
       </Grid>
     </Box>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Galery from './components/Galery';
+import ShopingKart from './components/ShopingKart';
 import ErrorPage from './utilities/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -69,6 +70,11 @@ const router =  createBrowserRouter([
   {
     path: "/shoes",
     element: <Galery title={"SHOES"} images={images} theme={theme} />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/shoping",
+    element: <ShopingKart theme={theme}/>,
     errorElement: <ErrorPage />
   }
 ]);
