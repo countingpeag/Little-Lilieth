@@ -7,7 +7,10 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Link from '@mui/material/Link';
 import { HashLink } from 'react-router-hash-link';
 import { useState, Fragment } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
@@ -85,7 +88,16 @@ const Header = (props) => {
                                             </HashLink>
                                         </Grid>
                                     </Grid>
-                                    <Grid xs={4}></Grid>
+                                    <Grid xs={4}>
+                                        <div className="kart-alignment">
+                                            <Link href="/shoping">
+                                                <IconButton aria-label="next">
+                                                    <ShoppingCartIcon/>
+                                                    <h5>Cart</h5>
+                                                </IconButton>
+                                            </Link>
+                                        </div>
+                                    </Grid>
                                 </Toolbar>
                             </AppBar>
                         </HideOnScroll>
