@@ -10,7 +10,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { useState, Fragment } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
@@ -90,7 +90,7 @@ const Header = (props) => {
                                     </Grid>
                                     <Grid xs={4}>
                                         <div className="kart-alignment">
-                                            <Link href="/shoping">
+                                            <Link to={"/shoping"}>
                                                 <IconButton aria-label="next">
                                                     <ShoppingCartIcon/>
                                                     <h5>Cart</h5>
