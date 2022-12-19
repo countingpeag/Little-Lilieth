@@ -12,6 +12,11 @@
     align-items: flex-end;
 }
 
+.kart-alignment{
+    margin-left: 75%;
+    margin-right: 4%;
+}
+
 .left-space{
     margin-left: 8%;
     margin-top: 20%;
