@@ -20,6 +20,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import BurstModeIcon from '@mui/icons-material/BurstMode';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import ApartmentIcon from '@mui/icons-material/Apartment';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useState, Fragment } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
@@ -88,6 +89,14 @@ const GaleryMenu = (props) => {
                     <ListItemButton>
                         <LiveHelpIcon />
                         <ListItemText primary={"FAQ"} />
+                    </ListItemButton>
+                </ListItem>
+            </Link>
+            <Link style={{ textDecoration: 'none' }} to="/shoping">
+                <ListItem key={"shoping"} disablePadding>
+                    <ListItemButton>
+                        <ShoppingCartIcon />
+                        <ListItemText primary={"Kart"} />
                     </ListItemButton>
                 </ListItem>
             </Link>

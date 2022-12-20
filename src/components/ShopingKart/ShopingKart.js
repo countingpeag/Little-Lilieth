@@ -1,14 +1,19 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import SubFooter from '../Footers/SubFooter';
 import SubHeader from '../Headers/SubHeader';
+import SubMenu from '../Menus/SubMenu';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import '../../Styles/shopingKart.css'
 
 const ShopingKart = ({theme}) => {
+
+    const matches = useMediaQuery('(min-width:600px)');
+
     return (
         <Grid container>
             <Grid xs={12}>
-                <SubHeader theme={theme}/>
+                { matches ? <SubHeader theme={theme} /> : <SubMenu theme={theme} /> }
             </Grid>
             <Grid xs={12} className="list">
                 <h1>Shoping Kart</h1>
