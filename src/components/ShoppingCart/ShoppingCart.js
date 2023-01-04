@@ -4,13 +4,11 @@ import SubHeader from '../Headers/SubHeader';
 import SubMenu from '../Menus/SubMenu';
 import Divider from '@mui/material/Divider';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import ShopingElement from './ShopingElement';
+import ShopingElement from './ShoppingElement';
 
 import '../../Styles/shopingKart.css'
 
-const ShopingKart = ({theme}) => {
-
-    const kartElements = ["ELEMENT1","ELEMENT2","ELEMENT3","ELEMENT4"];
+const ShopingKart = ({theme, images}) => {
 
     const matches = useMediaQuery('(min-width:600px)');
 
@@ -25,7 +23,7 @@ const ShopingKart = ({theme}) => {
             </Grid>
             <Grid xs={12}>
                 {
-                    kartElements.map( item => {
+                    images.map( item => {
                         return <div id={item}>
                             <ShopingElement item={item}/>
                             <Divider />
@@ -33,7 +31,7 @@ const ShopingKart = ({theme}) => {
                     })
                 }
             </Grid>
-            <Grid xs={12} className="subFooter">
+            <Grid xs={12}>
                 <SubFooter theme={theme} />
             </Grid>
         </Grid>

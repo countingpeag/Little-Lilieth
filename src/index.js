@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Galery from './components/Galery';
-import ShopingKart from './components/ShopingKart';
+import ShopingKart from './components/ShoppingCart';
 import ErrorPage from './utilities/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -74,7 +74,7 @@ const router =  createBrowserRouter([
   },
   {
     path: "/shoping",
-    element: <ShopingKart theme={theme}/>,
+    element: <ShopingKart theme={theme} images={images}/>,
     errorElement: <ErrorPage />
   }
 ]);
