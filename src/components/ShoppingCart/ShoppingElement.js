@@ -10,17 +10,17 @@ const ShopingElement = ({item}) => {
 
     return (
         <Grid container>
-            <Grid xs={4}>
-                <Card sx={{ maxWidth: 345 }}>
+            <Grid xs={3} className="image">
+                <Card sx={{ maxWidth: 320 }}>
                     <CardActionArea onClick={() => console.log("ITEM CLICKED")}>
-                        <CardMedia component="img" height={matches ? 200 : 100} image={item.image} alt={item.title}/>
+                        <CardMedia component="img" height={matches ? 240 : 140} image={item.image} alt={item.title}/>
                     </CardActionArea>
                 </Card>
             </Grid>
-            <Grid xs={4}>
+            <Grid xs={5} className="description">
                 <h2>DESCRIPTION</h2>
             </Grid>
-            <Grid xs={4}>
+            <Grid xs={4} className="price">
                 <h2>PRICE</h2>
             </Grid>
         </Grid>

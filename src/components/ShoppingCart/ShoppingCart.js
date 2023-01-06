@@ -6,7 +6,7 @@ import Divider from '@mui/material/Divider';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ShopingElement from './ShoppingElement';
 
-import '../../Styles/shopingKart.css'
+import '../../Styles/shoppingCart.css'
 
 const ShopingKart = ({theme, images}) => {
 
