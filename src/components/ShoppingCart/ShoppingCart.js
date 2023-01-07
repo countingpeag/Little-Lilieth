@@ -32,6 +32,15 @@ const ShopingKart = ({theme, images}) => {
                 }
             </Grid>
             <Grid xs={12}>
+                <h2>ENVIO</h2>
+            </Grid>
+            <Grid xs={12}>
+                <h2>TOTAL</h2>
+            </Grid>
+            <Grid xs={12}>
+                <h2>BUTTON PROCEED WITH THE PAYMENT</h2>
+            </Grid>
+            <Grid xs={12}>
                 <SubFooter theme={theme} />
             </Grid>
         </Grid>

@@ -18,7 +18,8 @@ const ShopingElement = ({item}) => {
                 </Card>
             </Grid>
             <Grid xs={5} className="description">
-                <h2>DESCRIPTION</h2>
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
             </Grid>
             <Grid xs={4} className="price">
                 <h2>PRICE</h2>
