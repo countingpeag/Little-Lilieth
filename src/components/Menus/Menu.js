@@ -20,9 +20,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import BurstModeIcon from '@mui/icons-material/BurstMode';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import ApartmentIcon from '@mui/icons-material/Apartment';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useState, Fragment } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 
 function HideOnScroll(props) {
@@ -33,7 +35,7 @@ function HideOnScroll(props) {
 
     return (
         <Slide appear={false} direction="down" in={!trigger}>
-        {children}
+            {children}
         </Slide>
     );
 }
@@ -92,6 +94,14 @@ const Menu = (props) => {
                     </ListItemButton>
                 </ListItem>
             </HashLink>
+            <Link style={{ textDecoration: 'none' }} to="/shoping">
+                <ListItem key={"shoping"} disablePadding>
+                    <ListItemButton>
+                        <ShoppingCartIcon />
+                        <ListItemText primary={"Kart"} />
+                    </ListItemButton>
+                </ListItem>
+            </Link>
           </List>
 
           <Divider />

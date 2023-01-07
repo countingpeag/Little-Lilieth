@@ -1,0 +1,19 @@
+.list{
+    margin-top: 2%;
+}
+
+.subFooter{
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description{
+    text-align: left;
+}
