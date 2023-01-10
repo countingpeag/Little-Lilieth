@@ -13,7 +13,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    margin-bottom: 1%;
+    margin-top: 1%;
 }
+
 .description{
     text-align: left;
+}
+
+.element{
+    background-color: brown;
+    margin-bottom: 5%;
+    border-bottom: 5%;
+    padding-bottom: 3%;
 }

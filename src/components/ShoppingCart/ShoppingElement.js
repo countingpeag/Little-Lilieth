@@ -20,9 +20,10 @@ const ShopingElement = ({item}) => {
             <Grid xs={5} className="description">
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
+                <h4>Quantity: 1</h4> 
             </Grid>
             <Grid xs={4} className="price">
-                <h2>PRICE</h2>
+                <h2>Price</h2>
             </Grid>
         </Grid>
     );

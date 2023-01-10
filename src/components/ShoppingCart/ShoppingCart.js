@@ -5,6 +5,7 @@ import SubMenu from '../Menus/SubMenu';
 import Divider from '@mui/material/Divider';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ShopingElement from './ShoppingElement';
+import Button from '@mui/material/Button';
 
 import '../../Styles/shoppingCart.css'
 
@@ -18,8 +19,8 @@ const ShopingKart = ({theme, images}) => {
                 { matches ? <SubHeader theme={theme} /> : <SubMenu theme={theme} /> }
             </Grid>
             <Grid xs={12} className="list">
-                <h1>Shoping Kart</h1>
-                <h3>Your shoping kart is empty. <a href="/">Keep browsing</a></h3>
+                <h1>Shopping Cart</h1>
+                <h3>Your shopping Cart is empty. <a href="/">Keep browsing</a></h3>
             </Grid>
             <Grid xs={12}>
                 {
@@ -38,7 +39,7 @@ const ShopingKart = ({theme, images}) => {
                 <h2>TOTAL</h2>
             </Grid>
             <Grid xs={12}>
-                <h2>BUTTON PROCEED WITH THE PAYMENT</h2>
+                <Button color={"secondary"} variant="contained">Proceed to checkout</Button>
             </Grid>
             <Grid xs={12}>
                 <SubFooter theme={theme} />
