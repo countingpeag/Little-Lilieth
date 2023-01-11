@@ -24,6 +24,7 @@ const ShopingElement = ({item}) => {
             </Grid>
             <Grid xs={4} className="price">
                 <h2>Price</h2>
+                <p>$30</p>
             </Grid>
         </Grid>
     );

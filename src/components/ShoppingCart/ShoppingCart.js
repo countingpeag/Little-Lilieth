@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 
 import '../../Styles/shoppingCart.css'
 
-const ShopingKart = ({theme, images}) => {
+const ShopingKart = ({images, theme}) => {
 
     const matches = useMediaQuery('(min-width:600px)');
 
@@ -32,14 +32,11 @@ const ShopingKart = ({theme, images}) => {
                     })
                 }
             </Grid>
-            <Grid xs={12}>
-                <h2>ENVIO</h2>
+            <Grid xs={12} className="totalPrice">
+                <h2>Total: $400</h2>
             </Grid>
-            <Grid xs={12}>
-                <h2>TOTAL</h2>
-            </Grid>
-            <Grid xs={12}>
-                <Button color={"secondary"} variant="contained">Proceed to checkout</Button>
+            <Grid xs={12} className="proceedButton">
+                <Button theme={theme} color={"secondary"} variant="contained">Proceed to checkout</Button>
             </Grid>
             <Grid xs={12}>
                 <SubFooter theme={theme} />
