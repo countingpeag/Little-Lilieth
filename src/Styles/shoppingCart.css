@@ -13,7 +13,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 1%;
+    margin-top: 1%;
 }
+
 .description{
     text-align: left;
+}
+
+@media (min-width: 600px) {
+    .totalPrice{
+        display: flex;
+        justify-content: right;
+        margin-right: 13%;
+    }
+
+    .proceedButton{
+        display: flex;
+        justify-content: right;
+        margin-right: 10%;
+        margin-bottom: 1%;
+    }
+}
+
+@media (max-width: 600px) {
+    .totalPrice{
+        display: flex;
+        justify-content: right;
+        margin-right: 4%;
+    }
+
+    .proceedButton{
+        display: flex;
+        justify-content: right;
+        margin-right: 4%;
+        margin-bottom: 2%;
+    }
 }
