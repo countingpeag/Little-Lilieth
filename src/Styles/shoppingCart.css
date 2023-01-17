@@ -2,6 +2,11 @@
     margin-top: 2%;
 }
 
+.emptyCart{
+    margin-bottom: 18px;
+    height: 66vh;
+}
+
 .subFooter{
     position:absolute;
     right:0px;
@@ -32,7 +37,7 @@
     .proceedButton{
         display: flex;
         justify-content: right;
-        margin-right: 10%;
+        margin-right: 11%;
         margin-bottom: 1%;
     }
 }

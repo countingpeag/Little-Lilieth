@@ -43,11 +43,13 @@ const ShoppingElements = ({images, theme}) => {
                     })
                 }
             </Grid>
-            <Grid xs={12} className="totalPrice">
-                <h2>Total: $400</h2>
+            <Grid xs={12}>
+                <h2 className="totalPrice">Total: $400</h2>
             </Grid>
-            <Grid xs={12} className="proceedButton">
-                <Button theme={theme} color={"secondary"} variant="contained">Proceed to checkout</Button>
+            <Grid xs={12}>
+                <div className="proceedButton">
+                    <Button theme={theme} color={"secondary"} variant="contained">Proceed to checkout</Button>
+                </div>
             </Grid>
         </Grid>
     );

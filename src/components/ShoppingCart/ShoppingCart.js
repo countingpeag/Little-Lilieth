@@ -20,7 +20,7 @@ const ShopingKart = ({images, theme}) => {
             </Grid>
             <Grid xs={12} className="list">
                 {
-                    items.length<=0 ? <ShoppingEmptyCart /> : <ShoppingElements images={images} theme={theme} />
+                    items.length<=0 ? <ShoppingEmptyCart /> : <ShoppingElements images={items} theme={theme} />
                 }
             </Grid>
             <Grid xs={12}>
