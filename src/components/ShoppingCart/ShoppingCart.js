@@ -4,7 +4,7 @@ import SubHeader from '../Headers/SubHeader';
 import SubMenu from '../Menus/SubMenu';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ShoppingElements from './ShoppingElements';
-import ShoppingEmptyCart from './ShoppingEmptyCart';
+//import ShoppingEmptyCart from './ShoppingEmptyCart';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -15,12 +15,12 @@ import { useState, ReactNode, Fragment } from 'react';
 
 import '../../Styles/shoppingCart.css';
 
-const steps = ['Shopping Cart', 'Paymant Confirmation', 'Finished'];
-
 const ShopingKart = ({images, theme}) => {
 
     const items = images;
     const matches = useMediaQuery('(min-width:600px)');
+    const steps = ['Shopping Cart', 'Paymant Confirmation', 'Finished'];
+    const components = [<ShoppingElements images={items} theme={theme} />, "NOTHING"];
 
     const [activeStep, setActiveStep] = useState(0);
     const [skipped, setSkipped] = useState(new Set());
@@ -82,7 +82,11 @@ const ShopingKart = ({images, theme}) => {
                             </Fragment>
                         ) : (
                         <Fragment>
-                            <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+                            <Typography sx={{ mt: 2, mb: 1 }}>
+                                {
+                                    components[activeStep]
+                                }
+                            </Typography>
                             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                                 <Button color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
                                     Back
@@ -95,11 +99,6 @@ const ShopingKart = ({images, theme}) => {
                         </Fragment>
                     )}
                 </Box>
-            </Grid>
-            <Grid xs={12} className="list">
-                {
-                    items.length<=0 ? <ShoppingEmptyCart /> : <ShoppingElements images={items} theme={theme} />
-                }
             </Grid>
             <Grid xs={12}>
                 <SubFooter theme={theme} />
