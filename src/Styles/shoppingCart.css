@@ -38,7 +38,12 @@
         display: flex;
         justify-content: right;
         margin-right: 11%;
-        margin-bottom: 1%;
+    }
+
+    .backButton{
+        display: flex;
+        justify-content: left;
+        margin-left: 6%;
     }
 }
 
@@ -53,6 +58,16 @@
         display: flex;
         justify-content: right;
         margin-right: 4%;
-        margin-bottom: 2%;
     }
+
+    .backButton{
+        display: flex;
+        justify-content: left;
+        margin-left: 4%;
+    }
+}
+
+.boxStepper{
+    margin-bottom: 1%;
+
 }

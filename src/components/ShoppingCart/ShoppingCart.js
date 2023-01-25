@@ -89,14 +89,18 @@ const ShopingKart = ({images, theme}) => {
                                         components[activeStep]
                                     }
                                 </Typography>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-                                    <Button color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
-                                        Back
-                                    </Button>
+                                <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }} className="boxStepper">
+                                    <div className="backButton">
+                                        <Button color={"secondary"} variant="contained" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
+                                            Back
+                                        </Button>
+                                    </div>
                                     <Box sx={{ flex: '1 1 auto' }} />
-                                    <Button onClick={handleNext}>
-                                        { activeStep === steps.length - 1 ? 'Finish' : 'Next' }
-                                    </Button>
+                                    <div className="proceedButton">
+                                        <Button color={"secondary"} variant="contained" onClick={handleNext}>
+                                            { activeStep === steps.length - 1 ? 'Finish' : 'Proceed to checkout' }
+                                        </Button>
+                                    </div>
                                 </Box>
                             </Fragment>
                         )}
