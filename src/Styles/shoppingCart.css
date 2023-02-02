@@ -45,6 +45,12 @@
         justify-content: left;
         margin-left: 6%;
     }
+
+    .doneButton{
+        display: flex;
+        justify-content: left;
+        margin-right: 47%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -64,6 +70,12 @@
         display: flex;
         justify-content: left;
         margin-left: 4%;
+    }
+
+    .doneButton{
+        display: flex;
+        justify-content: left;
+        margin-right: 43%;
     }
 }
 

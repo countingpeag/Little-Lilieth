@@ -77,9 +77,9 @@ const ShopingKart = ({images, theme}) => {
                                     <Typography sx={{ mt: 2, mb: 1 }}>
                                         All steps completed - you&apos;re finished
                                     </Typography>
-                                    <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+                                    <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }} className="doneButton">
                                         <Box sx={{ flex: '1 1 auto' }} />
-                                        <Button onClick={handleReset}>Reset</Button>
+                                        <Button theme={theme} variant="contained" onClick={handleReset}>Done</Button>
                                     </Box>
                                 </Fragment>
                             ) : (
@@ -98,7 +98,7 @@ const ShopingKart = ({images, theme}) => {
                                     <Box sx={{ flex: '1 1 auto' }} />
                                     <div className="proceedButton">
                                         <Button color={"secondary"} variant="contained" onClick={handleNext}>
-                                            { activeStep === steps.length - 1 ? 'Finish' : 'Proceed to checkout' }
+                                            { activeStep === steps.length - 1 ? 'Pay' : 'Proceetd to checkout' }
                                         </Button>
                                     </div>
                                 </Box>
