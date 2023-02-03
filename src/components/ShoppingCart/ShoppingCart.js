@@ -15,6 +15,7 @@ import { useState, ReactNode, Fragment } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 
 import '../../Styles/shoppingCart.css';
+import ShoppingEmptyCart from './ShoppingEmptyCart';
 
 const ShopingKart = ({images, theme}) => {
 
@@ -56,56 +57,59 @@ const ShopingKart = ({images, theme}) => {
                 { matches ? <SubHeader theme={theme} /> : <SubMenu theme={theme} /> }
             </Grid>
             <Grid xs={12}>
-                <ThemeProvider theme={theme}>
-                    <Box sx={{ width: '100%' }} className="alignment">
-                        <Stepper activeStep={activeStep}>
+            {
+                items.length<=0 ? <ShoppingEmptyCart /> :
+                    <ThemeProvider theme={theme}>
+                        <Box sx={{ width: '100%' }} className="alignment">
+                            <Stepper activeStep={activeStep}>
+                                {
+                                    steps.map((label, index) => {
+                                        const stepProps: { completed ? : boolean } = {};
+                                        const labelProps: { optional ? : ReactNode } = {};
+                                        return (
+                                            <Step key={label} {...stepProps}>
+                                            <StepLabel {...labelProps}>{label}</StepLabel>
+                                            </Step>
+                                        );
+                                    })
+                                }
+                            </Stepper>
                             {
-                                steps.map((label, index) => {
-                                    const stepProps: { completed ? : boolean } = {};
-                                    const labelProps: { optional ? : ReactNode } = {};
-                                    return (
-                                        <Step key={label} {...stepProps}>
-                                        <StepLabel {...labelProps}>{label}</StepLabel>
-                                        </Step>
-                                    );
-                                })
-                            }
-                        </Stepper>
-                        {
-                            activeStep === steps.length ? (
+                                activeStep === steps.length ? (
+                                    <Fragment>
+                                        <Typography sx={{ mt: 2, mb: 1 }}>
+                                            All steps completed - you&apos;re finished
+                                        </Typography>
+                                        <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }} className="doneButton">
+                                            <Box sx={{ flex: '1 1 auto' }} />
+                                            <Button theme={theme} variant="contained" onClick={handleReset}>Done</Button>
+                                        </Box>
+                                    </Fragment>
+                                ) : (
                                 <Fragment>
                                     <Typography sx={{ mt: 2, mb: 1 }}>
-                                        All steps completed - you&apos;re finished
+                                        {
+                                            components[activeStep]
+                                        }
                                     </Typography>
-                                    <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }} className="doneButton">
+                                    <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }} className="boxStepper">
+                                        <div className="backButton">
+                                            <Button color={"secondary"} variant="contained" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
+                                                Back
+                                            </Button>
+                                        </div>
                                         <Box sx={{ flex: '1 1 auto' }} />
-                                        <Button theme={theme} variant="contained" onClick={handleReset}>Done</Button>
+                                        <div className="proceedButton">
+                                            <Button color={"secondary"} variant="contained" onClick={handleNext}>
+                                                { activeStep === steps.length - 1 ? 'Pay' : 'Proceetd to checkout' }
+                                            </Button>
+                                        </div>
                                     </Box>
                                 </Fragment>
-                            ) : (
-                            <Fragment>
-                                <Typography sx={{ mt: 2, mb: 1 }}>
-                                    {
-                                        components[activeStep]
-                                    }
-                                </Typography>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }} className="boxStepper">
-                                    <div className="backButton">
-                                        <Button color={"secondary"} variant="contained" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
-                                            Back
-                                        </Button>
-                                    </div>
-                                    <Box sx={{ flex: '1 1 auto' }} />
-                                    <div className="proceedButton">
-                                        <Button color={"secondary"} variant="contained" onClick={handleNext}>
-                                            { activeStep === steps.length - 1 ? 'Pay' : 'Proceetd to checkout' }
-                                        </Button>
-                                    </div>
-                                </Box>
-                            </Fragment>
-                        )}
-                    </Box>
-                </ThemeProvider>
+                            )}
+                        </Box>
+                    </ThemeProvider>
+            }
             </Grid>
             <Grid xs={12}>
                 <SubFooter theme={theme} />
