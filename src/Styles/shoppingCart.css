@@ -1,5 +1,10 @@
-.list{
+.alignment{
     margin-top: 2%;
+}
+
+.emptyCart{
+    margin-bottom: 18px;
+    height: 66vh;
 }
 
 .subFooter{
@@ -32,8 +37,19 @@
     .proceedButton{
         display: flex;
         justify-content: right;
-        margin-right: 10%;
-        margin-bottom: 1%;
+        margin-right: 11%;
+    }
+
+    .backButton{
+        display: flex;
+        justify-content: left;
+        margin-left: 6%;
+    }
+
+    .doneButton{
+        display: flex;
+        justify-content: left;
+        margin-right: 47%;
     }
 }
 
@@ -48,6 +64,22 @@
         display: flex;
         justify-content: right;
         margin-right: 4%;
-        margin-bottom: 2%;
     }
+
+    .backButton{
+        display: flex;
+        justify-content: left;
+        margin-left: 4%;
+    }
+
+    .doneButton{
+        display: flex;
+        justify-content: left;
+        margin-right: 43%;
+    }
+}
+
+.boxStepper{
+    margin-bottom: 1%;
+
 }

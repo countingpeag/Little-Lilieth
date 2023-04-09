@@ -1,14 +1,13 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CardActionArea from '@mui/material/CardActionArea';
 
 import '../../Styles/shoppingCart.css';
 
-const ShoppingElements = ({images, theme}) => {
+const ShoppingElements = ({images}) => {
 
     const matches = useMediaQuery('(min-width:600px)');
 
@@ -43,11 +42,8 @@ const ShoppingElements = ({images, theme}) => {
                     })
                 }
             </Grid>
-            <Grid xs={12} className="totalPrice">
-                <h2>Total: $400</h2>
-            </Grid>
-            <Grid xs={12} className="proceedButton">
-                <Button theme={theme} color={"secondary"} variant="contained">Proceed to checkout</Button>
+            <Grid xs={12}>
+                <h2 className="totalPrice">Total: $400</h2>
             </Grid>
         </Grid>
     );
