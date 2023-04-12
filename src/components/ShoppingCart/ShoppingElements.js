@@ -4,6 +4,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Divider from '@mui/material/Divider';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CardActionArea from '@mui/material/CardActionArea';
+import Button from '@mui/material/Button';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 import '../../Styles/shoppingCart.css';
 
@@ -29,7 +31,7 @@ const ShoppingElements = ({images}) => {
                                     <Grid xs={5} className="description">
                                         <h2>{item.title}</h2>
                                         <p>{item.description}</p>
-                                        <h4>Quantity: 1</h4> 
+                                        Quantity: 1  <Button variant="text"><DeleteOutlineIcon /></Button>  
                                     </Grid>
                                     <Grid xs={4} className="price">
                                         <h2>Price</h2>
