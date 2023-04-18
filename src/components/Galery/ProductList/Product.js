@@ -24,11 +24,8 @@ const Product = ({theme, opened, closeMethod, addMethod, removeMethod, matches, 
                         </IconButton>
                     </Grid>
                     <Grid xs={6} className="color">
-                        <Typography id="modal-modal-title" variant="h4" component="h4" align='center'>
-                            TITLE
-                        </Typography>
                         <Card sx={{ maxWidth: 450 }} className="imageSpace">
-                            <CardMedia component="img" height={matches ? 400 : 230} image={image} alt={"image"}/>
+                            <CardMedia component="img" height={matches ? 340 : 230} image={image} alt={"image"}/>
                         </Card>
                     </Grid>
                     <Grid xs={6}>
